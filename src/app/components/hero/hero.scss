@@ -1,0 +1,126 @@
+$violet: #8879ce;
+$white: #ffffff;
+$orange: #ff692d;
+
+.hero {
+  h1 {
+    font-weight: 800;
+    font-size: 315px;
+    line-height: 262px;
+    padding: 0 5px;
+    color: $violet;
+  }
+  span {
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $orange;
+    }
+    &::before {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      color: $orange;
+      z-index: -1;
+      transform: scale(1.02);
+      filter: drop-shadow(0 0 2px $orange);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover::before {
+      opacity: 1;
+      animation: glitch 0.5s linear infinite;
+    }
+  }
+  @keyframes glitch {
+    0% {
+      transform: translate(0) scale(1.02);
+    }
+    20% {
+      transform: translate(-2px, 2px) scale(1.02);
+    }
+    40% {
+      transform: translate(2px, -2px) scale(1.02);
+    }
+    60% {
+      transform: translate(-1px, 1px) scale(1.02);
+    }
+    80% {
+      transform: translate(1px, -1px) scale(1.02);
+    }
+    100% {
+      transform: translate(0) scale(1.02);
+    }
+  }
+  .bg {
+    font-weight: 800;
+    font-size: 315px;
+    line-height: 262px;
+    color: $white;
+    background-color: $violet;
+    padding-top: 70px;
+    text-align: right;
+    overflow: hidden;
+    .bg {
+      font-weight: 800;
+      font-size: 315px;
+      line-height: 262px;
+      color: $white;
+      background-color: $violet;
+      padding-top: 70px;
+      text-align: right;
+
+      animation: colorCycle 6s linear infinite;
+      display: inline-block;
+    }
+  }
+  .small {
+    line-height: 0.9;
+    font-size: 190px;
+  }
+  .top {
+    padding-top: 0;
+    margin-top: -73px;
+  }
+  .hidden {
+    display: none;
+  }
+  @keyframes colorCycle {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+
+  .delay-1 {
+    animation-delay: 0.1s;
+  }
+
+  .delay-2 {
+    animation-delay: 0.3s;
+  }
+
+  .delay-3 {
+    animation-delay: 0.5s;
+  }
+  .delay-4 {
+    animation-delay: 0.7s;
+  }
+  .delay-5 {
+    animation-delay: 0.9s;
+  }
+  .delay-6 {
+    animation-delay: 1.3s;
+  }
+  .delay-7 {
+    animation-delay: 1.5s;
+  }
+}

@@ -1,0 +1,14 @@
+[
+    {
+    "title": "Virginia Rita Luengo",
+    "img": "./vir-img.jpg",
+    "link": "https://virginiaritaluengo.vercel.app/",
+    "description": "Sitio web para Virginia Rita,  directora y directora de fotografía. Me encargué del diseño y desarrollo completo con un enfoque minimalista y elegante que refleja su estilo visual. La web es 100% responsive y está pensada para mostrar su porfolio audiovisual con claridad."
+    },
+    {
+    "title": "Proyecto Encifras — Pickgeo",
+    "img": "/pickgeo-img.jpg",
+    "link": "https://encifras.aytosalamanca.es/",
+    "description": "Proyecto colaborativo dentro de una startup. Participé en el diseño y desarrollo frontend de esta plataforma de datos abiertos para el Ayuntamiento de Salamanca. Usamos tecnologías modernas (Vue.js, APIs de datos, Mapbox, diseño modular) para ofrecer una interfaz clara, accesible y útil para la ciudadanía."
+    }
+]
