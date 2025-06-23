@@ -94,10 +94,6 @@ $orange: #ff692d;
         color: white;
         text-decoration: none;
         font-weight: 500;
-
-        &:hover {
-          background-color: darken($orange, 10%);
-        }
       }
     }
   }
