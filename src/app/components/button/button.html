@@ -1,0 +1,20 @@
+<button class="custom-btn animated-button" [class.btn-primary]="variant === 'primary'"
+    [class.btn-secondary]="variant === 'secondary'" [class.btn-disabled]="disabled" [class.btn-small]="size === 'small'"
+    [class.btn-large]="size === 'large'" [disabled]="disabled" (click)="handleClick($event)">
+
+    <div class="mask-wrap">
+        <span class="button-text">{{ label }}</span>
+        <span class="button-text">{{ label }}</span>
+    </div>
+
+    <div class="mask-wrap is-horizontal">
+        <svg class="button-icon" viewBox="0 0 64 64" fill="none">
+            <path d="M54.4727 31.7842L7.99983 31.7842" stroke="currentColor" stroke-width="5" />
+            <path d="M31.8477 54.3994L54.4777 31.7685L32.3095 9.59942" stroke="currentColor" stroke-width="5" />
+        </svg>
+        <svg class="button-icon" viewBox="0 0 64 64" fill="none">
+            <path d="M54.4727 31.7842L7.99983 31.7842" stroke="currentColor" stroke-width="5" />
+            <path d="M31.8477 54.3994L54.4777 31.7685L32.3095 9.59942" stroke="currentColor" stroke-width="5" />
+        </svg>
+    </div>
+</button>

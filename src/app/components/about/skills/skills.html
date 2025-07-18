@@ -1,0 +1,9 @@
+<div class="skills">
+    <ul class="list">
+        @for (skill of skills; track skill) {
+        <li #skillItem [class.bg]="skill.isBg">
+            {{ skill.name }}
+        </li>
+        }
+    </ul>
+</div>
