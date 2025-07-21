@@ -1,14 +1,34 @@
 [
-    {
+  {
     "title": "Virginia Rita Luengo",
     "img": "./vir-img.jpg",
     "link": "https://virginiaritaluengo.vercel.app/",
     "description": "Sitio web para Virginia Rita,  directora y directora de fotografía. Me encargué del diseño y desarrollo completo con un enfoque minimalista y elegante que refleja su estilo visual. La web es 100% responsive y está pensada para mostrar su porfolio audiovisual con claridad."
-    },
-    {
+  },
+  {
     "title": "Proyecto Encifras — Pickgeo",
-    "img": "/pickgeo-img.jpg",
-    "link": "https://encifras.aytosalamanca.es/",
-    "description": "Proyecto colaborativo dentro de una startup. Participé en el diseño y desarrollo frontend de esta plataforma de datos abiertos para el Ayuntamiento de Salamanca. Usamos tecnologías modernas (Vue.js, APIs de datos, Mapbox, diseño modular) para ofrecer una interfaz clara, accesible y útil para la ciudadanía."
-    }
+    "examples": [
+      {
+        "img": "/salamanca-img.jpg",
+        "link": "https://encifras.aytosalamanca.es/",
+        "city": "Salamanca"
+      },
+      {
+        "img": "/alcala-img.jpg",
+        "link": "https://negocios.alcalalareal.es/",
+        "city": "Alcalá la Real"
+      },
+      {
+        "img": "/miranda-img.jpg",
+        "link": "https://geo.mirandaempresas.com/",
+        "city": "Miranda de Ebro"
+      },
+      {
+        "img": "/vitoria-img.jpg",
+        "link": "https://vitoria.pickgeo.com/",
+        "city": "Vitoria-Gasteiz"
+      }
+    ],
+    "description": "Proyecto colaborativo dentro de una startup. Participé en el diseño y desarrollo frontend de esta plataforma de datos abiertos para los Ayuntamientos de Salamanca, Alcalá la Real, Miranda de Ebro y Vitoria-Gasteiz. Usamos tecnologías modernas (Vue.js, APIs de datos, Mapbox, diseño modular) para ofrecer una interfaz clara, accesible y útil para la ciudadanía."
+  }
 ]
