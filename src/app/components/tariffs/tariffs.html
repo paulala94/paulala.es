@@ -1,57 +1,85 @@
-<!-- <div class="services-container">
-    <div class="service">
-        <h2>Web One Page</h2>
-
+<section class="pricing-section">
+  <h2 class="pricing-title">Tarifas</h2>
+  <div class="pricing-cards">
+    <div class="card web">
+      <div class="icon">🌐</div>
+      <h3>One Page</h3>
+      <ul>
+        <li>Landing visual moderna</li>
+        <li>Formulario y RRSS</li>
+        <li>Responsive total</li>
+      </ul>
+      <div class="prices">
+        <span><strong>WordPress:</strong> 300 - 950 €</span>
+        <span><strong>A medida:</strong> 600 - 1.600 €</span>
+      </div>
+      <app-button
+        label="Pide presupuesto"
+        variant="primary"
+        (onClick)="openPricingForm('one-page')"
+      >
+      </app-button>
     </div>
-</div> -->
-
-<div class="servicios-grid">
-    <!-- One Page -->
-    <div class="servicio-card">
-        <h3>ONE PAGE</h3>
-        <p class="precio">€400-€800</p>
-        <ul>
-            <li>📱 Landing moderna</li>
-            <li>⚡ Mobile First</li>
-            <li>📝 Formulario integrado</li>
-        </ul>
-        <button>Contratar</button>
+    <div class="card web">
+      <div class="icon">💼</div>
+      <h3>Web Completa</h3>
+      <ul>
+        <li>5-7 secciones</li>
+        <li>Diseño único</li>
+        <li>Integración blog o portfolio</li>
+      </ul>
+      <div class="prices">
+        <span><strong>WordPress:</strong> 700 - 1.800 €</span>
+        <span><strong>A medida:</strong> 1.000 - 3.000 €</span>
+      </div>
+      <app-button
+        label="Pide presupuesto"
+        variant="primary"
+        (onClick)="openPricingForm('one-page')"
+      >
+      </app-button>
     </div>
-
-    <!-- Web Código Puro -->
-    <div class="servicio-card destacado">
-        <div class="badge">RECOMENDADO</div>
-        <h3>WEB COMPLETA (CÓDIGO)</h3>
-        <p class="precio">€1,500-€4,000</p>
-        <ul>
-            <li>🛠️ 100% personalizada</li>
-            <li>🚀 Sin WordPress</li>
-            <li>🔒 Más segura</li>
-        </ul>
-        <button>Contratar</button>
+    <div class="card other">
+      <div class="icon">🖌️</div>
+      <h3>Prototipado Figma</h3>
+      <ul>
+        <li>Wireframe & prototipo validable</li>
+        <li>Entrega editable</li>
+        <li>UX/UI adaptado a tus necesidades</li>
+      </ul>
+      <div class="prices">
+        <span><strong>WordPress:</strong> 120 - 280 €/pág.</span>
+        <span><strong>A medida:</strong> 170 - 400 €/pág.</span>
+      </div>
+      <app-button
+        label="Solicita un prototipo"
+        variant="primary"
+        (onClick)="openPricingForm('one-page')"
+      >
+      </app-button>
     </div>
-
-    <!-- Diseño Figma -->
-    <div class="servicio-card">
-        <h3>DISEÑO FIGMA</h3>
-        <p class="precio">€300-€700</p>
-        <ul>
-            <li>🎨 Prototipo clickeable</li>
-            <li>✏️ 2 revisiones</li>
-            <li>📐 Guías de desarrollo</li>
-        </ul>
-        <button>Contratar</button>
+    <div class="card other">
+      <div class="icon">🔧</div>
+      <h3>Mantenimiento Web</h3>
+      <ul>
+        <li>Actualizaciones y copias</li>
+        <li>Pequeños cambios incluidos</li>
+        <li>Soporte directo</li>
+      </ul>
+      <div class="prices">
+        <span><strong>WordPress:</strong> 20 - 50 €/mes</span>
+        <span><strong>A medida:</strong> 35 - 80 €/mes</span>
+      </div>
+      <app-button
+        label="Pide presupuesto"
+        variant="primary"
+        (onClick)="openPricingForm('one-page')"
+      >
+      </app-button>
     </div>
-
-    <!-- Mantenimiento -->
-    <div class="servicio-card">
-        <h3>MANTENIMIENTO</h3>
-        <p class="precio">€30-€150/mes</p>
-        <ul>
-            <li>🔄 Actualizaciones</li>
-            <li>🛡️ Protección anti-hackers</li>
-            <li>📞 Soporte prioritario</li>
-        </ul>
-        <button>Contratar</button>
-    </div>
-</div>
+  </div>
+  <p class="disclaimer">
+    *Precios orientativos. IVA no incluido. Cada web es única: ajusto cada
+    presupuesto a tus necesidades y a los extras que incluyas.
+  </p>
+</section>
