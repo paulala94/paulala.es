@@ -1,15 +1,20 @@
 import { Component, AfterViewInit, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Button } from '../button/button'; // Ajusta si tu botón está en otro path
-
+import { Button } from '../button/button';
+import { PricingModalComponent } from '../pricing-modal/pricing-modal';
 @Component({
   selector: 'app-tariffs',
   standalone: true,
-  imports: [CommonModule, Button],
+  imports: [CommonModule, Button, PricingModalComponent],
   templateUrl: './tariffs.html',
   styleUrl: './tariffs.scss',
 })
 export class Tariffs implements AfterViewInit {
+  hoveredIndex: number | null = null;
+
+  showModal = false;
+  selectedPlan: string | null = null;
+
   constructor(private elementRef: ElementRef) {}
 
   ngAfterViewInit(): void {
@@ -40,9 +45,12 @@ export class Tariffs implements AfterViewInit {
   }
 
   openPricingForm(plan: string): void {
-    console.log('Solicitud de presupuesto para:', plan);
+    this.selectedPlan = plan;
+    this.showModal = true;
+  }
 
-    // Puedes conectar esta acción con un modal, un formulario, scroll, etc.
-    // document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+  closeModal(): void {
+    this.showModal = false;
+    this.selectedPlan = null;
   }
 }

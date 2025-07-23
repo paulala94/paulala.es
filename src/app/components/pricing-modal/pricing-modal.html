@@ -1,0 +1,24 @@
+<div class="modal-backdrop" (click)="closeModal()"></div>
+
+<div class="modal-content">
+  <button class="close-btn" (click)="closeModal()">×</button>
+  <h2>Hablemos de <span>{{ plan }}</span></h2>
+
+  <form (submit)="submitForm(); $event.preventDefault()">
+    <label>
+      <input placeholder="Mi nombre es" type="text" required />
+    </label>
+
+    <label>
+      <input placeholder="Mi email es" type="email" required />
+    </label>
+
+    <label>
+      <textarea
+        required
+        placeholder="Cuéntame más sobre tu proyecto."
+      ></textarea>
+    </label>
+    <app-button label="Enviar" variant="primary" type="submit" />
+  </form>
+</div>

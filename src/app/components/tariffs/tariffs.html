@@ -1,8 +1,13 @@
 <section class="pricing-section">
   <h2 class="pricing-title">Tarifas</h2>
   <div class="pricing-cards">
-    <div class="card web">
-      <div class="icon">🌐</div>
+    <!-- Tarjeta 0 -->
+    <div
+      class="card web"
+      (mouseenter)="hoveredIndex = 0"
+      (mouseleave)="hoveredIndex = null"
+    >
+      <img class="icon" src="assets/img/monitor.svg" alt="OnePage" />
       <h3>One Page</h3>
       <ul>
         <li>Landing visual moderna</li>
@@ -15,13 +20,18 @@
       </div>
       <app-button
         label="Pide presupuesto"
-        variant="primary"
-        (onClick)="openPricingForm('one-page')"
-      >
-      </app-button>
+        [variant]="hoveredIndex === 0 ? 'secondary' : 'primary'"
+        (onClick)="openPricingForm('One Page')"
+      ></app-button>
     </div>
-    <div class="card web">
-      <div class="icon">💼</div>
+
+    <!-- Tarjeta 1 -->
+    <div
+      class="card web"
+      (mouseenter)="hoveredIndex = 1"
+      (mouseleave)="hoveredIndex = null"
+    >
+      <img class="icon" src="assets/img/globe.svg" alt="Web Completa" />
       <h3>Web Completa</h3>
       <ul>
         <li>5-7 secciones</li>
@@ -34,13 +44,22 @@
       </div>
       <app-button
         label="Pide presupuesto"
-        variant="primary"
-        (onClick)="openPricingForm('one-page')"
-      >
-      </app-button>
+        [variant]="hoveredIndex === 1 ? 'secondary' : 'primary'"
+        (onClick)="openPricingForm('Web Completa')"
+      ></app-button>
     </div>
-    <div class="card other">
-      <div class="icon">🖌️</div>
+
+    <!-- Tarjeta 2 -->
+    <div
+      class="card other"
+      (mouseenter)="hoveredIndex = 2"
+      (mouseleave)="hoveredIndex = null"
+    >
+      <img
+        class="icon"
+        src="assets/img/pen-tool-1.svg"
+        alt="Prototipado Figma"
+      />
       <h3>Prototipado Figma</h3>
       <ul>
         <li>Wireframe & prototipo validable</li>
@@ -53,13 +72,18 @@
       </div>
       <app-button
         label="Solicita un prototipo"
-        variant="primary"
-        (onClick)="openPricingForm('one-page')"
-      >
-      </app-button>
+        [variant]="hoveredIndex === 2 ? 'secondary' : 'primary'"
+        (onClick)="openPricingForm('Prototipado')"
+      ></app-button>
     </div>
-    <div class="card other">
-      <div class="icon">🔧</div>
+
+    <!-- Tarjeta 3 -->
+    <div
+      class="card other"
+      (mouseenter)="hoveredIndex = 3"
+      (mouseleave)="hoveredIndex = null"
+    >
+      <img class="icon" src="assets/img/tool.svg" alt="Mantenimiento Web" />
       <h3>Mantenimiento Web</h3>
       <ul>
         <li>Actualizaciones y copias</li>
@@ -72,14 +96,21 @@
       </div>
       <app-button
         label="Pide presupuesto"
-        variant="primary"
-        (onClick)="openPricingForm('one-page')"
-      >
-      </app-button>
+        [variant]="hoveredIndex === 3 ? 'secondary' : 'primary'"
+        (onClick)="openPricingForm('Mantenimiento')"
+      ></app-button>
     </div>
   </div>
+
   <p class="disclaimer">
     *Precios orientativos. IVA no incluido. Cada web es única: ajusto cada
     presupuesto a tus necesidades y a los extras que incluyas.
   </p>
 </section>
+
+<!-- Modal de presupuesto -->
+<app-pricing-modal
+  *ngIf="showModal"
+  [plan]="selectedPlan"
+  (close)="closeModal()"
+></app-pricing-modal>

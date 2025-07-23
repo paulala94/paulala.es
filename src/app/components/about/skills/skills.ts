@@ -36,7 +36,7 @@ export class Skills implements AfterViewInit {
     if (!list) return;
 
     const initialDelay = 200;
-    const delayStep = 100;
+    const delayStep = 200;
 
     const observer = new IntersectionObserver(
       (entries) => {

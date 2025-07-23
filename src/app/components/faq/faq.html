@@ -1,0 +1,32 @@
+<section class="faq-container">
+  <h2 class="faq-title">Preguntas frecuentes</h2>
+  <ul class="faq-list">
+    <li *ngFor="let item of faqs; index as i" class="faq-item">
+      <button
+        class="faq-question"
+        (click)="toggle(i)"
+        [attr.aria-expanded]="item.open"
+        [attr.aria-controls]="'faq-answer-' + i"
+        id="faq-question-{{ i }}"
+      >
+        {{ item.question }}
+
+        <img
+          class="arrow"
+          src="/assets/img/open.svg"
+          alt="abrir pregunta"
+          [class.open]="item.open"
+        />
+      </button>
+      <div
+        class="faq-answer"
+        [id]="'faq-answer-' + i"
+        [class.open]="item.open"
+        [attr.aria-labelledby]="'faq-question-' + i"
+        role="region"
+      >
+        <p>{{ item.answer }}</p>
+      </div>
+    </li>
+  </ul>
+</section>

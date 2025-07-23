@@ -1,5 +1,6 @@
 $violet: #8879ce;
 $orange: #ff692d;
+$white: #fff;
 
 .custom-btn {
   display: inline-flex;
@@ -10,24 +11,41 @@ $orange: #ff692d;
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;
-  color: white;
   transition: all 0.3s ease;
   border: none;
   font-family: inherit;
   position: relative;
   overflow: hidden;
-  background-color: transparent;
+
+  // 👇 PRIMARY BUTTON
   &.btn-primary {
     border: 2px solid $orange;
-    color: 2px solid white;
     background-color: $orange;
+    color: $white;
 
     &:hover:not(.btn-disabled) {
       background-color: $orange;
+      border-color: $orange;
+      color: $white;
+    }
+  }
+
+  // 👇 SECONDARY BUTTON
+  &.btn-secondary {
+    border: 2px solid $white;
+    background-color: $white;
+    color: $orange;
+
+    &:hover:not(.btn-disabled) {
+      background-color: $white;
+      color: $orange;
+      border: 2px solid $white;
+      // opcionalmente puedes añadir una interacción:
+      box-shadow: 0 0 8px rgba($orange, 0.15);
+      transform: translateY(-2px);
     }
   }
 }
-
 .animated-button {
   .mask-wrap {
     position: relative;
@@ -46,12 +64,8 @@ $orange: #ff692d;
       transform: translateY(100%);
     }
 
-    &.is-horizontal {
-      display: inline-flex;
-
-      > :nth-child(2) {
-        transform: translateX(100%);
-      }
+    &.is-horizontal > :nth-child(2) {
+      transform: translateX(100%);
     }
   }
 

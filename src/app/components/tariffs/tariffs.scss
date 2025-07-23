@@ -4,9 +4,7 @@ $white: #fff;
 
 .pricing-section {
   width: 100%;
-  min-height: 100vh;
-  padding-bottom: 60px;
-  margin-bottom: 60px;
+
   .pricing-title {
     font-size: 24px;
     margin-top: 120px;
@@ -17,26 +15,44 @@ $white: #fff;
     flex-wrap: wrap;
     gap: 36px;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 
     .card {
       display: grid;
-      grid-template-rows: auto auto 1fr auto auto; // icon, h3, ul, prices, button
+      grid-template-rows: auto auto 1fr auto auto;
       align-items: stretch;
       text-align: center;
+      padding: 40px 0;
 
-      box-shadow: 0 6px 28px rgba(136, 121, 206, 0.11);
-      padding: 34px 26px 32px 26px;
-      width: 285px;
-      transition: box-shadow 0.3s, transform 0.3s;
-
+      opacity: 0;
+      transform: translateY(90px);
+      clip-path: inset(0 0 0 0);
+      transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1),
+        opacity 1.2s cubic-bezier(0.23, 1, 0.32, 1),
+        clip-path 1.2s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s ease;
+      &.in-view {
+        opacity: 1;
+        transform: translateY(0) scaleY(1);
+        clip-path: inset(0 0 0 0 12px);
+        box-shadow: 0 10px 38px rgba($orange, 0.18);
+      }
       &:hover,
       &:focus-within {
-        box-shadow: 0 10px 38px rgba($orange, 0.18);
-        transform: translateY(-7px) scale(1.02);
+        background-color: $orange;
+        border: 4px solid black;
+        h3 {
+          color: $white;
+        }
+        span {
+          color: $white;
+        }
       }
+
       .icon {
-        font-size: 2.4em;
-        margin-bottom: 20px;
+        width: 20%;
+        margin: auto;
+        margin-bottom: 25px;
       }
       h3 {
         font-size: 1.3em;
@@ -92,7 +108,7 @@ $white: #fff;
     text-align: center;
     font-size: 0.92em;
     margin-top: 44px;
-    color: $white;
+    color: $violet;
     opacity: 0.85;
   }
 }
@@ -109,6 +125,9 @@ $white: #fff;
 }
 .card.web {
   background-color: $violet;
+  border: 4px solid transparent;
+
+  transition: background-color 0.3s ease, border 0.3s ease;
   h3 {
     color: $white;
   }
@@ -118,55 +137,15 @@ $white: #fff;
 }
 
 .card.other {
-  border: 2px solid $violet;
+  border: 4px solid $violet;
   background: $white;
   color: $violet;
+  transition: background-color 0.3s ease, border 0.3s ease;
+
   h3 {
     color: $violet;
   }
   span {
     color: $orange;
-  }
-}
-.pricing-cards .card {
-  opacity: 0;
-  transform: translateY(80px);
-}
-
-.pricing-cards .card.in-view {
-  opacity: 1;
-  animation: bounce-in-bottom 1.15s both;
-}
-
-@keyframes bounce-in-bottom {
-  0% {
-    transform: translateY(80px);
-    opacity: 0;
-    animation-timing-function: ease-in;
-  }
-  38% {
-    transform: translateY(0);
-    opacity: 1;
-    animation-timing-function: ease-out;
-  }
-  55% {
-    transform: translateY(24px);
-    animation-timing-function: ease-in;
-  }
-  72% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-  81% {
-    transform: translateY(10px);
-    animation-timing-function: ease-in;
-  }
-  90% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
