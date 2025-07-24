@@ -10,16 +10,57 @@ import { Button } from '../button/button';
   standalone: true,
 })
 export class PricingModalComponent {
-  @Input() plan: string | null = null;
-  @Output() close = new EventEmitter<void>();
+  @Input() selectedPlan: string | null = null;
+
+  sending = false;
+  sent = false;
+
+  constructor(private http: HttpClient) {}
 
   closeModal() {
-    this.close.emit();
+    this.sent = false;
+    this.sending = false;
+    // Emitir evento para que el padre cierre el modal si lo deseas
   }
 
-  submitForm() {
-    // Este sería tu lógica de envío del formulario
-    alert(`Formulario enviado para: ${this.plan}`);
-    this.closeModal();
+  submitForm(form: NgForm) {
+    if (form.invalid) {
+      form.control.markAllAsTouched();
+      return;
+    }
+
+    const formData = new FormData();
+
+    // Honeypot anti spam
+    const honeypot = form.value['honeypot'];
+    if (honeypot) {
+      // Bot detected
+      return;
+    }
+
+    formData.append('plan', this.selectedPlan || '');
+    formData.append('name', form.value['name'] || '');
+    formData.append('email', form.value['email'] || '');
+    formData.append('message', form.value['message'] || '');
+
+    this.sending = true;
+
+    // Endpoint de Formspree -- reemplaza con tu URL real
+    const formspreeURL = 'https://formspree.io/f/xblkojkd';
+
+    this.http.post(formspreeURL, formData, { responseType: 'text' }).subscribe(
+      () => {
+        this.sending = false;
+        this.sent = true;
+        form.resetForm();
+      },
+      (error) => {
+        this.sending = false;
+        alert(
+          'Ha ocurrido un error al enviar el formulario. Inténtalo más tarde.'
+        );
+        console.error(error);
+      }
+    );
   }
 }

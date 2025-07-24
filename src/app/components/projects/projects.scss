@@ -94,8 +94,8 @@ $orange: #ff692d;
         text-decoration: none;
         font-weight: 500;
         position: relative;
-        overflow: hidden; /* Añadido para contener el pseudo-elemento */
-        z-index: 1; /* Asegura que el texto esté encima */
+        overflow: hidden;
+        z-index: 1;
 
         &::before {
           content: "";
@@ -182,26 +182,5 @@ $orange: #ff692d;
         width: 48%;
       }
     }
-  }
-}
-
-@keyframes glitch {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    transform: translate(2px, -2px);
-  }
-  60% {
-    transform: translate(-2px, 0);
-  }
-  80% {
-    transform: translate(2px, 0);
-  }
-  100% {
-    transform: translate(0);
   }
 }

@@ -4,21 +4,28 @@
   <button class="close-btn" (click)="closeModal()">×</button>
   <h2>Hablemos de <span>{{ plan }}</span></h2>
 
-  <form (submit)="submitForm(); $event.preventDefault()">
+  <form action="https://formspree.io/f/xblkojkd" method="POST" target="_blank">
+    <input type="hidden" name="plan" [value]="selectedPlan" />
+
     <label>
-      <input placeholder="Mi nombre es" type="text" required />
+      <input name="name" type="text" placeholder="Mi nombre es" required />
     </label>
 
     <label>
-      <input placeholder="Mi email es" type="email" required />
+      <input name="email" type="email" placeholder="Mi email es" required />
     </label>
 
     <label>
       <textarea
-        required
+        name="message"
         placeholder="Cuéntame más sobre tu proyecto."
+        required
       ></textarea>
+      <label style="display: none">
+        <input type="text" name="honeypot" autocomplete="off" tabindex="-1" />
+      </label>
     </label>
-    <app-button label="Enviar" variant="primary" type="submit" />
+
+    <app-button label="Enviar" variant="primary" type="submit"></app-button>
   </form>
 </div>

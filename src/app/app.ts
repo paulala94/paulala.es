@@ -8,10 +8,11 @@ import { About } from './components/about/about';
 import { Projects } from './components/projects/projects';
 import { Tariffs } from './components/tariffs/tariffs';
 import { Faq } from './components/faq/faq';
+import { Contact } from './components/contact/contact';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, Navbar, Hero, About, Projects, Tariffs, Faq],
+  imports: [CommonModule, Navbar, Hero, About, Projects, Tariffs, Faq, Contact],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
