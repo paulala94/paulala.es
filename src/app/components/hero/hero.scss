@@ -60,11 +60,11 @@ $orange: #ff692d;
   .hero {
     h1 {
       font-size: 212px;
-      line-height: 201px;
+      line-height: 171px;
     }
     .bg {
       font-size: 212px;
-      line-height: 201px;
+      line-height: 171px;
       padding-top: 35px;
     }
     .small {
@@ -75,83 +75,68 @@ $orange: #ff692d;
         font-size: 139px;
       }
     }
-    .top {
-      margin-top: -40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    h1 {
+      font-size: 159px;
+      line-height: 127px;
+    }
+    .bg {
+      font-size: 159px;
+      line-height: 127px;
+    }
+    .small {
+      font-size: 127px;
+    }
+    p.bg.top {
+      .mask-wrap.small {
+        font-size: 102px;
+      }
     }
   }
 }
 
-// @media (max-width: 768px) {
-//   // .hero {
-//   //   h1 {
-//   //     font-size: 76px;
-//   //     line-height: 73px;
-//   //   }
-//   //   .bg {
-//   //     font-size: 76px;
-//   //     line-height: 73px;
-//   //     padding-top: 35px;
-//   //   }
-//   //   .bg > .mask-wrap[data-text="DISEÑO"] span,
-//   //   .bg > .mask-wrap.small span {
-//   //     line-height: 1.18 !important;
-//   //   }
-//   //   .small {
-//   //     font-size: 50px;
-//   //   }
-//   //   p.bg.top {
-//   //     .mask-wrap.small {
-//   //       font-size: 55px;
-//   //     }
-//   //   }
-//   //   .top {
-//   //     margin-top: -40px;
-//   //   }
-//   // }
-// }
+@media (max-width: 480px) {
+  .hero {
+    h1 {
+      font-size: 87px;
+      line-height: 79px;
+    }
+    .bg {
+      font-size: 87px;
+      line-height: 79px;
+    }
+    .small {
+      font-size: 69px;
+    }
+    p.bg.top {
+      .mask-wrap.small {
+        font-size: 50px;
+      }
+    }
+  }
+}
 
-// @media (max-width: 480px) {
-//   .hero {
-//     h1 {
-//       font-size: 65px;
-//       line-height: 55px;
-//     }
-//     .bg {
-//       font-size: 65px;
-//       line-height: 55px;
-//       padding-top: 35px;
-//     }
-//     .small {
-//       font-size: 50px;
-//     }
-//   }
-// }
-
-// @media (max-width: 320px) {
-//   .hero {
-//     h1 {
-//       font-size: 65px;
-//       line-height: 55px;
-//     }
-//     .bg {
-//       font-size: 65px;
-//       line-height: 55px;
-//       padding-top: 35px;
-//     }
-//     .bg > .mask-wrap[data-text="DISEÑO"] span,
-//     .bg > .mask-wrap.small span {
-//       line-height: 1.18 !important;
-//     }
-//     .small {
-//       font-size: 50px;
-//     }
-//     p.bg.top {
-//       .mask-wrap.small {
-//         font-size: 47px;
-//       }
-//     }
-//     .top {
-//       margin-top: -40px;
-//     }
-//   }
-// }
+@media (max-width: 320px) {
+  .hero {
+    h1 {
+      font-size: 77px;
+      line-height: 70px;
+    }
+    .bg {
+      font-size: 77px;
+      line-height: 70px;
+    }
+    .small {
+      font-size: 69px;
+    }
+    p.bg.top {
+      .mask-wrap.small {
+        font-size: 50px;
+      }
+    }
+  }
+}
