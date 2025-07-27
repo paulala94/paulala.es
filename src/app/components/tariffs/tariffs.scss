@@ -113,16 +113,6 @@ $white: #fff;
   }
 }
 
-@media (max-width: 950px) {
-  .pricing-section .pricing-cards {
-    flex-direction: column;
-    align-items: center;
-    .card {
-      width: 92vw;
-      max-width: 360px;
-    }
-  }
-}
 .card.web {
   background-color: $violet;
   border: 4px solid transparent;

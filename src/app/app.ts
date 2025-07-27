@@ -9,10 +9,21 @@ import { Projects } from './components/projects/projects';
 import { Tariffs } from './components/tariffs/tariffs';
 import { Faq } from './components/faq/faq';
 import { Contact } from './components/contact/contact';
+import { Footer } from './components/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, Navbar, Hero, About, Projects, Tariffs, Faq, Contact],
+  imports: [
+    CommonModule,
+    Navbar,
+    Hero,
+    About,
+    Projects,
+    Tariffs,
+    Faq,
+    Contact,
+    Footer,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

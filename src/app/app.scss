@@ -6,4 +6,26 @@ $orange: #ff692d;
 
 body {
   font-family: "Manrope", sans-serif;
+  scroll-behavior: smooth;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 1024px) {
+  .occult {
+    display: none;
+  }
+}
+
+// @media (max-width: 768px) {
+
+// }
+
+// @media (max-width: 480px) {
+
+// }
+
+// @media (max-width: 320px) {
+//
+// }

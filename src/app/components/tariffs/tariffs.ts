@@ -1,11 +1,12 @@
 import { Component, AfterViewInit, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Button } from '../button/button';
-import { PricingModalComponent } from '../pricing-modal/pricing-modal';
+import { PricingModal } from '../pricing-modal/pricing-modal';
+
 @Component({
   selector: 'app-tariffs',
   standalone: true,
-  imports: [CommonModule, Button, PricingModalComponent],
+  imports: [CommonModule, Button, PricingModal],
   templateUrl: './tariffs.html',
   styleUrl: './tariffs.scss',
 })

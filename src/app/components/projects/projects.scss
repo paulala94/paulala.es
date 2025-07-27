@@ -166,21 +166,3 @@ $orange: #ff692d;
     }
   }
 }
-
-@media (max-width: 900px) {
-  .project-content {
-    flex-direction: column;
-    .info,
-    .project-gallery {
-      width: 100%;
-      padding: 0;
-      text-align: left;
-      justify-content: center;
-    }
-    .project-gallery {
-      .project-example {
-        width: 48%;
-      }
-    }
-  }
-}

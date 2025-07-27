@@ -2,30 +2,63 @@
 
 <div class="modal-content">
   <button class="close-btn" (click)="closeModal()">×</button>
-  <h2>Hablemos de <span>{{ plan }}</span></h2>
 
-  <form action="https://formspree.io/f/xblkojkd" method="POST" target="_blank">
-    <input type="hidden" name="plan" [value]="selectedPlan" />
+  <ng-container *ngIf="!sent; else successTemplate">
+    <h2>Hablemos de <span>{{ selectedPlan }}</span></h2>
 
-    <label>
-      <input name="name" type="text" placeholder="Mi nombre es" required />
-    </label>
+    <form #form="ngForm" (ngSubmit)="submitForm(form)" novalidate>
+      <input type="hidden" name="plan" [value]="selectedPlan" />
 
-    <label>
-      <input name="email" type="email" placeholder="Mi email es" required />
-    </label>
-
-    <label>
-      <textarea
-        name="message"
-        placeholder="Cuéntame más sobre tu proyecto."
-        required
-      ></textarea>
-      <label style="display: none">
-        <input type="text" name="honeypot" autocomplete="off" tabindex="-1" />
+      <label>
+        <input
+          name="name"
+          type="text"
+          placeholder="Mi nombre es"
+          required
+          ngModel
+        />
       </label>
-    </label>
 
-    <app-button label="Enviar" variant="primary" type="submit"></app-button>
-  </form>
+      <label>
+        <input
+          name="email"
+          type="email"
+          placeholder="Mi email es"
+          required
+          ngModel
+        />
+      </label>
+
+      <label>
+        <textarea
+          name="message"
+          placeholder="Cuéntame más sobre tu proyecto:"
+          required
+          ngModel
+        ></textarea>
+        <input
+          type="text"
+          name="honeypot"
+          autocomplete="off"
+          tabindex="-1"
+          style="display: none"
+          ngModel
+        />
+      </label>
+
+      <app-button
+        label="Enviar"
+        variant="primary"
+        type="submit"
+        [disabled]="sending"
+      ></app-button>
+    </form>
+  </ng-container>
+
+  <ng-template #successTemplate>
+    <div class="success-message">
+      <h3>¡Enviado correctamente!</h3>
+      <p>Gracias por contactar, pronto recibirás una respuesta</p>
+    </div>
+  </ng-template>
 </div>

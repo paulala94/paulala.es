@@ -1,1 +1,64 @@
-<p>contact works!</p>
+<div class="contact-content" id="contact">
+  <h2>¿HABLAMOS?</h2>
+
+  <ng-container *ngIf="!sent; else successTemplate">
+    <form #form="ngForm" (ngSubmit)="submitForm(form)" novalidate>
+      <label>
+        <input
+          name="name"
+          type="text"
+          placeholder="Tu nombre"
+          required
+          ngModel
+        />
+      </label>
+
+      <label>
+        <input
+          name="email"
+          type="email"
+          placeholder="Tu email"
+          required
+          ngModel
+        />
+      </label>
+
+      <label>
+        <textarea
+          name="message"
+          placeholder="Tu idea"
+          required
+          ngModel
+        ></textarea>
+        <input
+          type="text"
+          name="honeypot"
+          autocomplete="off"
+          tabindex="-1"
+          style="display: none"
+          ngModel
+        />
+      </label>
+      <app-button
+        class="button"
+        label="Enviar"
+        variant="primary"
+        type="submit"
+        [disabled]="sending"
+      ></app-button>
+    </form>
+  </ng-container>
+
+  <ng-template #successTemplate>
+    <div class="success-message">
+      <h3>¡Enviado correctamente!</h3>
+      <p>Gracias por contactar, pronto recibirás una respuesta</p>
+      <app-button
+        class="button"
+        label="Tengo más ideas"
+        variant="primary"
+        (click)="resetForm()"
+      ></app-button>
+    </div>
+  </ng-template>
+</div>

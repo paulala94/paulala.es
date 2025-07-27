@@ -6,7 +6,7 @@ $orange: #ff692d;
   h1 {
     font-weight: 800;
     font-size: 315px;
-    line-height: 262px;
+    line-height: 286px;
     padding: 0 5px;
     color: $violet;
   }
@@ -18,7 +18,7 @@ $orange: #ff692d;
   .bg {
     font-weight: 800;
     font-size: 315px;
-    line-height: 262px;
+    line-height: 286px;
     color: $white;
     background-color: $violet;
     padding-top: 70px;
@@ -28,7 +28,7 @@ $orange: #ff692d;
 
   .bg > .mask-wrap[data-text="DISEÑO"] span,
   .bg > .mask-wrap.small span {
-    line-height: 1.18 !important;
+    line-height: 1.2em !important;
   }
   .small {
     line-height: 0.9;
@@ -55,3 +55,103 @@ $orange: #ff692d;
     transform: translateY(0%);
   }
 }
+
+@media (max-width: 1024px) {
+  .hero {
+    h1 {
+      font-size: 212px;
+      line-height: 201px;
+    }
+    .bg {
+      font-size: 212px;
+      line-height: 201px;
+      padding-top: 35px;
+    }
+    .small {
+      font-size: 127px;
+    }
+    p.bg.top {
+      .mask-wrap.small {
+        font-size: 139px;
+      }
+    }
+    .top {
+      margin-top: -40px;
+    }
+  }
+}
+
+// @media (max-width: 768px) {
+//   // .hero {
+//   //   h1 {
+//   //     font-size: 76px;
+//   //     line-height: 73px;
+//   //   }
+//   //   .bg {
+//   //     font-size: 76px;
+//   //     line-height: 73px;
+//   //     padding-top: 35px;
+//   //   }
+//   //   .bg > .mask-wrap[data-text="DISEÑO"] span,
+//   //   .bg > .mask-wrap.small span {
+//   //     line-height: 1.18 !important;
+//   //   }
+//   //   .small {
+//   //     font-size: 50px;
+//   //   }
+//   //   p.bg.top {
+//   //     .mask-wrap.small {
+//   //       font-size: 55px;
+//   //     }
+//   //   }
+//   //   .top {
+//   //     margin-top: -40px;
+//   //   }
+//   // }
+// }
+
+// @media (max-width: 480px) {
+//   .hero {
+//     h1 {
+//       font-size: 65px;
+//       line-height: 55px;
+//     }
+//     .bg {
+//       font-size: 65px;
+//       line-height: 55px;
+//       padding-top: 35px;
+//     }
+//     .small {
+//       font-size: 50px;
+//     }
+//   }
+// }
+
+// @media (max-width: 320px) {
+//   .hero {
+//     h1 {
+//       font-size: 65px;
+//       line-height: 55px;
+//     }
+//     .bg {
+//       font-size: 65px;
+//       line-height: 55px;
+//       padding-top: 35px;
+//     }
+//     .bg > .mask-wrap[data-text="DISEÑO"] span,
+//     .bg > .mask-wrap.small span {
+//       line-height: 1.18 !important;
+//     }
+//     .small {
+//       font-size: 50px;
+//     }
+//     p.bg.top {
+//       .mask-wrap.small {
+//         font-size: 47px;
+//       }
+//     }
+//     .top {
+//       margin-top: -40px;
+//     }
+//   }
+// }

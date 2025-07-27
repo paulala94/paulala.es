@@ -69,3 +69,11 @@ $orange: #ff692d;
     cursor: pointer;
   }
 }
+
+.success-message {
+  text-align: center;
+  h3 {
+    color: $violet;
+    margin-bottom: 10px;
+  }
+}
