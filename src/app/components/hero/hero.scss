@@ -56,6 +56,17 @@ $orange: #ff692d;
   }
 }
 
+@media (max-width: 1140px) {
+  .hero {
+    h1 {
+      font-size: 298px;
+    }
+    .bg {
+      font-size: 298px;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .hero {
     h1 {
@@ -123,20 +134,20 @@ $orange: #ff692d;
 @media (max-width: 380px) {
   .hero {
     h1 {
-      font-size: 77px;
-      line-height: 70px;
+      font-size: 77px !important;
+      line-height: 70px !important;
     }
     .bg {
-      font-size: 77px;
-      line-height: 70px;
+      font-size: 77px !important;
+      line-height: 70px !important;
     }
     .small {
-      font-size: 69px;
+      font-size: 69px !important;
     }
     p.bg.top {
       .mask-wrap.small {
-        font-size: 50px;
-        margin-top: 25px;
+        font-size: 50px !important;
+        margin-top: 25px !important;
       }
     }
   }

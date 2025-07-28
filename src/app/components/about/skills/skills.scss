@@ -84,3 +84,32 @@ $violet: #8879ce;
     opacity: 1;
   }
 }
+
+@media (max-width: 1024px) {
+  .skills {
+    margin-left: 0;
+    ul {
+      margin-top: 30px;
+    }
+    li {
+      padding: 11px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  ul {
+    justify-content: flex-end !important;
+  }
+  li {
+    padding: 7px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills ul {
+    width: 80%;
+  }
+}
