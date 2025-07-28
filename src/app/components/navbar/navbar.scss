@@ -40,3 +40,33 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px;
+  }
+  .navbar__list {
+    font-size: 15px;
+    gap: 21px;
+  }
+}
+
+@media (max-width: 380px) {
+  .navbar__list {
+    font-size: 12px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar {
+    padding: 10px;
+  }
+  .navbar__list {
+    font-size: 10px;
+    gap: 16px;
+  }
+}
