@@ -103,3 +103,9 @@ $white: #fff;
     stroke: currentColor;
   }
 }
+
+@media (max-width: 768px) {
+  .button-text {
+    font-size: 12px;
+  }
+}

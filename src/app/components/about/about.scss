@@ -82,7 +82,6 @@ $orange: #ff692d;
     .responsive {
       display: block;
       text-align: right;
-      width: 74%;
       margin-left: 84px;
     }
   }
@@ -116,15 +115,21 @@ $orange: #ff692d;
 }
 
 @media (max-width: 768px) {
-  .section-title,
-  .about,
-  h2 {
-    font-size: 19px !important;
+  .about {
+    h2 {
+      font-size: 19px !important;
+      margin-left: 152px;
+    }
   }
-
+  .about {
+    width: 100%;
+  }
   .about .sentence {
     font-size: 16px;
     margin: 20px;
+  }
+  .info .text {
+    margin-right: 60px;
   }
 }
 
@@ -138,16 +143,30 @@ $orange: #ff692d;
   .about .section-title {
     margin-left: 20px;
   }
+  .responsive {
+    width: 74%;
+  }
   .info {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+    gap: 5px;
     img {
       width: 60%;
+      min-width: unset;
+      max-width: 100%;
+      margin-bottom: 18px;
+    }
+    .text {
+      margin-right: 150px;
     }
   }
 }
 
 @media (max-width: 380px) {
+  .info .text {
+    padding-left: 20px;
+    margin-right: 130px;
+  }
 }
 
 @media (max-width: 320px) {
