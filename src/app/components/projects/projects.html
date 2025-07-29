@@ -2,7 +2,7 @@
   <h1 class="section-title">Proyectos</h1>
 
   <div
-    class="project"
+    class="project desktop"
     *ngFor="let project of projects; let i = index"
     [class.even]="i % 2 === 0"
   >
@@ -43,6 +43,44 @@
         >
         </app-button>
       </div>
+    </ng-template>
+  </div>
+
+  <div
+    class="project mobile"
+    *ngFor="let project of projects; let i = index"
+    [ngClass]="{'even': i % 2 === 0}"
+  >
+    <h2>{{ project.title }}</h2>
+
+    <!-- Galería si hay ejemplos (múltiples imágenes) -->
+    <ng-container *ngIf="project.examples; else singleProjectMobile">
+      <div class="project-gallery">
+        <div class="project-example" *ngFor="let ex of project.examples">
+          <img [src]="ex.img" [alt]="ex.city || project.title" />
+        </div>
+      </div>
+      <p>{{ project.description }}</p>
+      <div class="project-buttons">
+        <app-button
+          class="btn"
+          *ngFor="let ex of project.examples"
+          [label]="ex.city"
+          variant="primary"
+          (onClick)="navigateToProject(ex.link)"
+        ></app-button>
+      </div>
+    </ng-container>
+
+    <ng-template #singleProjectMobile>
+      <img [src]="project.img" [alt]="project.title" />
+      <p>{{ project.description }}</p>
+      <app-button
+        *ngIf="project.link"
+        [label]="'Visitar'"
+        variant="primary"
+        (onClick)="navigateToProject(project.link)"
+      ></app-button>
     </ng-template>
   </div>
 </div>

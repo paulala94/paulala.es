@@ -7,7 +7,9 @@ $orange: #ff692d;
   min-height: 100vh;
   padding-bottom: 60px;
   margin-bottom: 60px;
-
+  .project.mobile {
+    display: none;
+  }
   .section-title {
     font-size: 24px;
     margin-top: 120px;
@@ -195,32 +197,49 @@ $orange: #ff692d;
 }
 
 @media (max-width: 480px) {
-  .project {
-    flex-direction: column-reverse;
-    align-items: center;
-    text-align: center;
+  .desktop {
+    display: none !important;
   }
-  .project img {
-    width: 80%;
-    margin-top: 24px;
-    max-width: 340px;
-  }
-  .project .info {
-    width: 100%;
-    padding: 0 12px;
-    text-align: right;
-  }
+
   .projects-container .section-title {
-    padding: 0;
-    margin-left: 20px;
-    margin-bottom: 50px;
-    padding-top: 50px;
+    padding: 20px 0 50px 20px;
   }
-  .projects-container .project {
+  .project.mobile {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 36px;
+    padding: 0 40px !important;
+  }
+  .project.desktop {
+    display: none !important;
+  }
+  .project.mobile img {
+    width: 100% !important;
+    max-width: 360px;
+    margin: 16px 0;
+  }
+  .project.mobile h2,
+  .project.mobile p {
+    text-align: center;
+    margin: 0 0 12px 0;
+  }
+  .project-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
     flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
   }
-  .projects-container .project.even .info {
-    padding-left: 5%;
-    text-align: left;
+  .projects-container .project:not(.even) img {
+    width: 100%;
+  }
+  .project-gallery {
+    display: flex;
+    gap: 5px;
+  }
+  .projects-container .project.even p {
+    width: 100%;
   }
 }

@@ -17,7 +17,6 @@ $white: #fff;
   position: relative;
   overflow: hidden;
 
-  // 👇 PRIMARY BUTTON
   &.btn-primary {
     border: 2px solid $orange;
     background-color: $orange;
@@ -30,7 +29,6 @@ $white: #fff;
     }
   }
 
-  // 👇 SECONDARY BUTTON
   &.btn-secondary {
     border: 2px solid $white;
     background-color: $white;
@@ -40,7 +38,6 @@ $white: #fff;
       background-color: $white;
       color: $orange;
       border: 2px solid $white;
-      // opcionalmente puedes añadir una interacción:
       box-shadow: 0 0 8px rgba($orange, 0.15);
       transform: translateY(-2px);
     }
@@ -107,5 +104,10 @@ $white: #fff;
 @media (max-width: 768px) {
   .button-text {
     font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .custom-btn {
+    padding: 8px;
   }
 }
