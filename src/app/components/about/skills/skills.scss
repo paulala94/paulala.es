@@ -108,8 +108,21 @@ $violet: #8879ce;
 }
 
 @media (max-width: 480px) {
+  .skills {
+    margin-bottom: -298px !important;
+    ul {
+      position: relative !important;
+      bottom: 226px;
+      left: 99px;
+      margin: auto;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      width: 34%;
+      text-align: center;
+      gap: 15px;
+      flex-direction: column;
+    }
+  }
   .skills ul {
-    margin: auto;
-    margin-top: 20px;
   }
 }
