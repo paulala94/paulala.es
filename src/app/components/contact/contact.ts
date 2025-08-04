@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule, NgForm } from '@angular/forms';
@@ -11,11 +11,32 @@ import { Button } from '../button/button';
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
-export class Contact {
+export class Contact implements AfterViewInit {
   sending = false;
   sent = false;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private elementRef: ElementRef) {}
+
+  ngAfterViewInit(): void {
+    // Selecciona el h2 dentro de .contact-content
+    const h2 = this.elementRef.nativeElement.querySelector(
+      '.contact-content h2'
+    );
+    if (!h2) return;
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            h2.classList.add('in-view');
+            obs.disconnect(); // Solo una vez
+          }
+        });
+      },
+      { threshold: 0.45 }
+    );
+    observer.observe(h2);
+  }
 
   submitForm(form: NgForm) {
     if (form.invalid) {
