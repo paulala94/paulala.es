@@ -113,16 +113,22 @@ $violet: #8879ce;
     ul {
       position: relative !important;
       bottom: 226px;
-      left: 99px;
+      left: 140px;
       margin: auto;
       margin-top: 20px;
       flex-wrap: wrap;
-      width: 34%;
+      width: 18%;
       text-align: center;
       gap: 15px;
       flex-direction: column;
     }
   }
-  .skills ul {
+}
+
+@media (max-width: 380px) {
+  .skills {
+    ul {
+      left: 105px;
+    }
   }
 }

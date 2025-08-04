@@ -16,7 +16,7 @@
         <app-button
           *ngFor="let linkItem of project.link"
           [label]="linkItem.name"
-          variant="primary"
+          variant="margin"
           (onClick)="navigateToProject(linkItem.url)"
         ></app-button>
       </div>

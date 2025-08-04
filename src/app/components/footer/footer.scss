@@ -28,3 +28,18 @@
     font-size: 12px;
   }
 }
+@media (max-width: 768px) {
+  .footer-content {
+    .logo {
+      width: 30%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    .logo {
+      width: 45%;
+    }
+  }
+}

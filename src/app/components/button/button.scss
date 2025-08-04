@@ -28,6 +28,19 @@ $white: #fff;
       color: $white;
     }
   }
+  &.btn-margin {
+    border: 2px solid $orange;
+    background-color: $orange;
+    color: $white;
+    margin-right: 5px;
+
+    &:hover:not(.btn-disabled) {
+      background-color: $orange;
+      border-color: $orange;
+      color: $white;
+      margin-right: 5px;
+    }
+  }
 
   &.btn-secondary {
     border: 2px solid $white;
@@ -102,6 +115,9 @@ $white: #fff;
 }
 
 @media (max-width: 768px) {
+  .custom-btn {
+    flex-direction: column-reverse;
+  }
   .button-text {
     font-size: 12px;
   }
