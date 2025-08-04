@@ -11,7 +11,15 @@ body {
 html {
   scroll-behavior: smooth;
 }
+#smooth-wrapper {
+  height: 100vh;
+  overflow: hidden;
+}
 
+#smooth-content {
+  min-height: 100%;
+  will-change: transform;
+}
 @media (max-width: 1024px) {
   .occult {
     display: none;
