@@ -125,10 +125,20 @@ $violet: #8879ce;
   }
 }
 
+@media (max-width: 450px) {
+  .skills {
+    ul {
+      bottom: 272px;
+      left: 100px;
+    }
+  }
+}
+
 @media (max-width: 380px) {
   .skills {
     ul {
-      left: 105px;
+      left: 70px;
+      bottom: 272px;
     }
   }
 }
