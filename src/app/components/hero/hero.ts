@@ -14,6 +14,17 @@ export class Hero implements AfterViewInit {
   ngAfterViewInit(): void {
     const delayStep = 150;
 
+    // 1. Animación secuencial para .logo .mask-wrap (al cargar)
+    const logoMasks = Array.from(
+      this.el.nativeElement.querySelectorAll('.logo .mask-wrap')
+    ) as HTMLElement[];
+    logoMasks.forEach((mask, i) => {
+      setTimeout(() => {
+        mask.classList.add('in-view');
+      }, i * 600); // 600 ms entre cada una
+    });
+
+    // 2. Resto de lógicas para otros bloques, como tenías...
     const allMaskWraps = Array.from(
       this.el.nativeElement.querySelectorAll('.mask-wrap')
     ) as HTMLElement[];
@@ -25,6 +36,7 @@ export class Hero implements AfterViewInit {
       (el) => !bgMaskWraps.includes(el)
     );
 
+    // IntersectionObserver para .bg
     const bgBlocks = Array.from(
       this.el.nativeElement.querySelectorAll('.bg')
     ) as HTMLElement[];
@@ -52,6 +64,7 @@ export class Hero implements AfterViewInit {
       observer.observe(bg);
     });
 
+    // Animación con IntersectionObserver para otros contenedores
     const parentGroups = new Map<HTMLElement, HTMLElement[]>();
 
     standaloneSpans.forEach((span) => {

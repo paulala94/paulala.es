@@ -64,6 +64,94 @@ $orange: #ff692d;
   }
 }
 
+@media (max-width: 2560px) {
+  .about {
+    margin-bottom: 400px;
+    .sentence {
+      font-size: 32px;
+    }
+    .section-title,
+    .about,
+    h2 {
+      font-size: 44px;
+    }
+    .text p {
+      font-size: 29px;
+    }
+    .skills {
+      position: relative;
+      top: 250px;
+    }
+  }
+}
+
+@media (max-width: 1900px) {
+  .about {
+    margin-bottom: 150px;
+    .sentence {
+      font-size: 25px;
+    }
+    .section-title,
+    .about,
+    h2 {
+      font-size: 30px;
+    }
+    .text p {
+      font-size: 22px;
+    }
+    .skills {
+      position: relative;
+      top: 60px;
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .about {
+    margin-bottom: 95px;
+    .sentence {
+      font-size: 21px;
+    }
+    .section-title,
+    .about,
+    h2 {
+      font-size: 30px;
+    }
+    .text p {
+      font-size: 16px;
+    }
+    .skills {
+      position: relative;
+      top: 50px;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .about {
+    margin-bottom: 95px;
+    .sentence {
+      font-size: 19px;
+    }
+    .section-title,
+    .about,
+    h2 {
+      font-size: 30px;
+    }
+    .text p {
+      font-size: 16px;
+    }
+    .skills {
+      position: relative;
+      top: 0;
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .sentence {
+    font-size: 16px;
+  }
+}
 @media (max-width: 1024px) {
   .section-title,
   .about,

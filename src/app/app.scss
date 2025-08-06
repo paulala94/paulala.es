@@ -7,6 +7,7 @@ $orange: #ff692d;
 body {
   font-family: "Manrope", sans-serif;
   scroll-behavior: smooth;
+  background-color: #ff682d;
 }
 html {
   scroll-behavior: smooth;
@@ -20,7 +21,9 @@ html {
   min-height: 100%;
   will-change: transform;
 }
-@media (max-width: 1024px) {
+.container {
+}
+@media (max-width: 2560px) {
   .occult {
     display: none;
   }

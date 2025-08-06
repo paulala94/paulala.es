@@ -85,6 +85,59 @@ $violet: #8879ce;
   }
 }
 
+@media (max-width: 2560px) {
+  .skills {
+    li {
+      font-size: 30px;
+    }
+  }
+}
+@media (max-width: 1900px) {
+  .skills {
+    li {
+      font-size: 24px;
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .skills {
+    li {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .skills {
+    li {
+      font-size: 16px;
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .skills {
+    li {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 1180px) {
+  .skills {
+    li {
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .skills {
+    li {
+      padding: 15px;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .skills {
     margin-left: 0;
