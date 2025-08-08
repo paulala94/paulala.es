@@ -2,14 +2,9 @@ $violet: #8879ce;
 $orange: #ff692d;
 
 .projects-container {
-  // background-color: $violet;
-  // width: 100%;
-  // min-height: 100vh;
-  // padding-bottom: 60px;
-  // margin-bottom: 60px;
-  background-image: linear-gradient(135deg, #8879ce 0%, #6b5bad 100%);
+  background-image: linear-gradient(135deg, $violet 0%, #6b5bad 100%);
   background-size: cover;
-  background-position: 50% 50%; // Aquí GSap animará verticalmente
+  background-position: 50% 50%;
   width: 100%;
   min-height: 100vh;
   padding-bottom: 60px;
@@ -19,187 +14,322 @@ $orange: #ff692d;
 
   .section-title {
     font-size: 24px;
-    margin-top: 120px;
     padding: 120px 0 50px 152px;
     color: white;
   }
 
   .project {
-    display: flex;
-    margin-bottom: 30px;
-    align-items: center;
-    padding: 20px 0;
     width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
 
-    &.mobile {
-      display: none;
-    }
-
-    img {
-      height: auto;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.11);
-      width: 40%;
-      max-width: 500px;
-      order: unset;
-    }
-
-    .info {
-      width: 60%;
-      padding-left: 5%;
-      text-align: left;
-      padding-right: 87px;
-
-      h2 {
-        font-size: 22px;
-        margin-bottom: 20px;
-        font-weight: 600;
+    &.desktop {
+      &.even {
+        flex-direction: row;
+        text-align: left;
+      }
+      &:not(.even) {
+        flex-direction: row-reverse;
+        text-align: right;
       }
 
-      p {
-        font-size: 18px;
-        margin-bottom: 15px;
-        width: 100%;
-      }
+      .media {
+        width: 40%;
 
-      a {
-        display: inline-block;
-        padding: 10px 24px;
-        background-color: $orange;
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
+        video,
+        img {
           width: 100%;
-          height: 100%;
-          background: #ff6f33;
-          z-index: -1;
-          opacity: 0;
-          transition: opacity 0.3s ease;
+          aspect-ratio: 16 / 9;
+          object-fit: cover;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.11);
+          display: block;
+        }
+      }
+
+      .info {
+        width: 60%;
+        padding: 0 50px;
+
+        h2 {
+          font-size: 22px;
+          margin-bottom: 20px;
+          font-weight: 600;
+          color: black;
         }
 
-        &:hover {
-          animation: glitch 0.6s linear infinite;
-          box-shadow: 0 0 10px rgba($orange, 0.8);
+        p {
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
 
-          &::before {
-            opacity: 1;
-            animation: glitch 0.6s linear infinite;
+        &:not(.even) & {
+          h2,
+          p {
+            text-align: right;
           }
         }
       }
     }
 
-    &.even {
-      justify-content: flex-start;
-      padding-left: 0;
-
-      img {
-        order: unset;
-      }
-
-      .info {
-        padding-left: 5%;
-        padding-right: 120px;
-        text-align: left;
-
-        p {
-          width: 82%;
-        }
-      }
-    }
-
-    &:not(.even) {
-      justify-content: flex-end;
-      padding-right: 0;
-
-      img {
-        order: 2;
-      }
-
-      .info {
-        text-align: right;
-        padding-left: 0;
-
-        h2,
-        p {
-          text-align: right;
-        }
-
-        p {
-          margin-left: auto;
-          width: 86%;
-        }
-      }
-    }
-  }
-}
-
-.project-content {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  gap: 32px;
-
-  .info {
-    width: 60%;
-    padding-left: 5%;
-    padding-right: 48px;
-    text-align: left;
-
-    .project-buttons {
-      display: flex;
-      gap: 14px;
-      margin: 24px 0 0 0;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      margin-right: 5px;
-    }
-  }
-
-  .project-gallery {
-    width: 40%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: flex-end;
-
-    .project-example {
-      width: 48%;
-      box-sizing: border-box;
-      display: flex;
+    &.mobile {
+      display: none;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      margin-bottom: 8px;
+      margin-bottom: 36px;
 
-      img {
+      .media {
         width: 100%;
-        max-width: 100%;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.11);
+        max-width: 360px;
+        margin-bottom: 18px;
+
+        video,
+        img {
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          object-fit: cover;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.11);
+          display: block;
+        }
+      }
+
+      h2,
+      p {
+        text-align: center;
+        margin: 0 0 12px 0;
+      }
+
+      .project-buttons {
+        justify-content: center;
+      }
+    }
+  }
+
+  .project-buttons {
+    display: flex;
+    gap: 14px;
+    margin: 24px 0 0 0;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 2560px) {
+  .projects-container {
+    .section-title {
+      font-size: 44px;
+      margin-top: 120px;
+      margin-bottom: 50px;
+      padding: 120px 0 50px 260px;
+    }
+    .project {
+      .media {
+        width: 33% !important;
+      }
+    }
+    .project.desktop.even {
+      .info {
+        p {
+          position: relative;
+          left: 25px;
+          font-size: 29px;
+          width: 59%;
+          text-align: justify;
+        }
+
+        h2 {
+          font-size: 35px;
+        }
+      }
+    }
+    .project.desktop:not(.even) {
+      .info {
+        p {
+          font-size: 29px;
+          padding-left: 542px;
+          text-align: justify;
+          margin-right: 35px;
+        }
+        h2 {
+          font-size: 35px;
+        }
+      }
+      .project-buttons {
+        display: flex;
+        flex-direction: row-reverse;
       }
     }
   }
 }
 
-/* Media queries */
+@media (max-width: 1900px) {
+  .projects-container {
+    .section-title {
+      font-size: 30px;
+      margin-left: 193px;
+      padding: 0;
+    }
+
+    .project.desktop.even {
+      .info {
+        p {
+          font-size: 22px;
+        }
+
+        h2 {
+          font-size: 30px;
+        }
+      }
+    }
+    .project.desktop:not(.even) {
+      .info {
+        p {
+          font-size: 22px;
+          padding-left: 410px;
+        }
+        h2 {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .projects-container {
+    .section-title {
+      margin-left: 168px;
+    }
+
+    .project.desktop.even {
+      .info {
+        p {
+          font-size: 16px;
+        }
+
+        h2 {
+          font-size: 30px;
+        }
+      }
+    }
+    .project.desktop:not(.even) {
+      .info {
+        p {
+          font-size: 16px;
+          padding-left: 344px;
+        }
+        h2 {
+          font-size: 30px;
+        }
+        .project-buttons {
+          flex-wrap: nowrap;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .projects-container {
+    .section-title {
+      margin-left: 147px;
+    }
+
+    .project.desktop.even {
+      .info {
+        p {
+          font-size: 16px;
+        }
+
+        h2 {
+          font-size: 25px;
+        }
+      }
+    }
+    .project.desktop:not(.even) {
+      .info {
+        p {
+          font-size: 16px;
+          padding-left: 163px;
+        }
+        h2 {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 1024px) {
-  .project-content .project-gallery {
-    width: 50%;
+  .projects-container {
+    .section-title {
+      margin-left: 105px;
+    }
+
+    .project.desktop.even {
+      .info {
+        p {
+          font-size: 15px;
+          width: 95%;
+        }
+
+        h2 {
+          font-size: 25px;
+        }
+      }
+    }
+    .project.desktop:not(.even) {
+      .info {
+        p {
+          font-size: 15px;
+          padding: 0;
+        }
+        h2 {
+          font-size: 25px;
+        }
+      }
+    }
   }
 }
+
+// @media (max-width: 768px) {
+//   .projects-container {
+//     .section-title {
+//       margin-left: 154px;
+//       font-size: 19px;
+//     }
+
+//     .project.desktop.even {
+//       .info {
+//         p {
+//           font-size: 15px;
+//           width: 95%;
+//         }
+
+//         h2 {
+//           font-size: 25px;
+//         }
+//       }
+//     }
+//     .project.desktop:not(.even) {
+//       .info {
+//         p {
+//           font-size: 15px;
+//           padding: 0;
+//         }
+//         h2 {
+//           font-size: 25px;
+//         }
+//       }
+//     }
+//   }
+// }
 
 @media (max-width: 768px) {
   .projects-container {
     .section-title {
-      padding: 50px 0 50px 152px;
+      padding: 50px 0 50px 152px; // ajustado según tu ejemplo
+      margin-left: 0; // lo removí para dar coherencia con el padding
+      font-size: 19px; // opcional, puedes conservarlo o ajustar
     }
 
     .project.even .info {
@@ -208,14 +338,7 @@ $orange: #ff692d;
 
     .project .info p {
       font-size: 15px;
-    }
-  }
-
-  .project-content {
-    .project-gallery {
-      .project-example {
-        width: 100%;
-      }
+      width: auto; // para evitar problemas con width estrecho
     }
   }
 
@@ -235,6 +358,7 @@ $orange: #ff692d;
   .projects-container {
     .section-title {
       padding: 20px 0 50px 20px;
+      margin-left: 0; // para consistencia
     }
 
     .project.even p {

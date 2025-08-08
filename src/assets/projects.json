@@ -2,6 +2,7 @@
   {
     "title": "Web cine",
     "img": "./vir-img.jpg",
+    "video": "./vir-video.mp4",
     "link": [
       {
         "name": "Visitar",
@@ -13,6 +14,8 @@
   {
     "title": "Proyecto Encifras — Pickgeo",
     "img": "./salamanca-img.jpg",
+    "video": "./aytos-video.mp4",
+
     "link": [
       {
         "name": "Salamanca",

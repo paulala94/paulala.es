@@ -21,13 +21,13 @@ export class Projects implements AfterViewInit {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to('#projects', {
-      backgroundPosition: '50% 30%', // Ejemplo: mueve fondo del centro al 30% verticalmente
+      backgroundPosition: '50% 30%',
       ease: 'none',
       scrollTrigger: {
         trigger: '#projects',
-        start: 'top bottom', // Cuando la sección empieza a entrar
-        end: 'bottom top', // Hasta que la sección sale de la pantalla
-        scrub: true, // Animación sincronizada con el scroll
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true,
       },
     });
   }
