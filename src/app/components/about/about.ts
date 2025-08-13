@@ -61,9 +61,9 @@ export class About implements AfterViewInit {
     } else if (mq2560.matches) {
       // > 1900px y <= 2560px
       this.renderer.setStyle(text, 'position', 'absolute');
-      this.renderer.setStyle(text, 'left', 'calc(50% - 141px)');
+      this.renderer.setStyle(text, 'left', 'calc(50% - 627px)');
       this.renderer.setStyle(text, 'top', '36px');
-      this.renderer.setStyle(text, 'width', '1024px');
+      this.renderer.setStyle(text, 'width', '2000px');
       this.renderer.setStyle(text, 'text-align', 'center');
     } else {
       // > 2560px

@@ -9,7 +9,7 @@
         "url": "https://virginiaritaluengo.vercel.app/"
       }
     ],
-    "description": "Sitio web para Virginia Rita, directora y directora de fotografía. Me encargué del diseño y desarrollo completo con un enfoque minimalista y elegante que refleja su estilo visual. La web es 100% responsive y está pensada para mostrar su porfolio audiovisual con claridad."
+    "description": "Web minimalista y elegante para mostrar el porfolio audiovisual de Virginia Rita en todos los dispositivos."
   },
   {
     "title": "Proyecto Encifras — Pickgeo",
@@ -34,6 +34,6 @@
         "url": "https://vitoria.pickgeo.com/"
       }
     ],
-    "description": "Proyecto colaborativo dentro de una startup. Participé en el diseño y desarrollo frontend de esta plataforma de datos abiertos para los Ayuntamientos de Salamanca, Alcalá la Real, Miranda de Ebro y Vitoria-Gasteiz. Usamos tecnologías modernas (Vue.js, APIs de datos, Mapbox, diseño modular) para ofrecer una interfaz clara, accesible y útil para la ciudadanía."
+    "description": "Frontend colaborativo para startup: plataforma de datos abiertos para ayuntamientos con diseño claro, accesible y moderno."
   }
 ]

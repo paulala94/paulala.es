@@ -2,9 +2,7 @@ $violet: #8879ce;
 $orange: #ff692d;
 
 .projects-container {
-  background-image: linear-gradient(135deg, $violet 0%, #6b5bad 100%);
-  background-size: cover;
-  background-position: 50% 50%;
+  background-color: $violet;
   width: 100%;
   min-height: 100vh;
   padding-bottom: 60px;
@@ -57,18 +55,12 @@ $orange: #ff692d;
           margin-bottom: 20px;
           font-weight: 600;
           color: black;
+          text-align: left !important;
         }
 
         p {
           font-size: 18px;
           margin-bottom: 15px;
-        }
-
-        &:not(.even) & {
-          h2,
-          p {
-            text-align: right;
-          }
         }
       }
     }
@@ -109,11 +101,12 @@ $orange: #ff692d;
   .project-buttons {
     display: flex;
     gap: 14px;
-    margin: 24px 0 0 0;
+    margin: 24px 0 0;
     flex-wrap: wrap;
   }
 }
 
+/* === MEDIA QUERIES ORIGINALES === */
 @media (max-width: 2560px) {
   .projects-container {
     .section-title {
@@ -124,34 +117,31 @@ $orange: #ff692d;
     }
     .project {
       .media {
-        width: 33% !important;
+        width: 33%;
       }
     }
-    .project.desktop.even {
-      .info {
-        p {
-          position: relative;
-          left: 25px;
-          font-size: 29px;
-          width: 59%;
-          text-align: justify;
-        }
-
-        h2 {
-          font-size: 35px;
-        }
+    .project.desktop.even .info {
+      p {
+        position: relative;
+        left: 25px;
+        font-size: 35px;
+        width: 59%;
+        text-align: justify;
+      }
+      h2 {
+        font-size: 40px;
       }
     }
     .project.desktop:not(.even) {
       .info {
         p {
-          font-size: 29px;
+          font-size: 35px;
           padding-left: 542px;
           text-align: justify;
           margin-right: 35px;
         }
         h2 {
-          font-size: 35px;
+          font-size: 40px;
         }
       }
       .project-buttons {
@@ -169,60 +159,49 @@ $orange: #ff692d;
       margin-left: 193px;
       padding: 0;
     }
-
-    .project.desktop.even {
-      .info {
-        p {
-          font-size: 22px;
-        }
-
-        h2 {
-          font-size: 30px;
-        }
+    .project.desktop.even .info {
+      p {
+        font-size: 22px;
+      }
+      h2 {
+        font-size: 30px;
       }
     }
-    .project.desktop:not(.even) {
-      .info {
-        p {
-          font-size: 22px;
-          padding-left: 410px;
-        }
-        h2 {
-          font-size: 30px;
-        }
+    .project.desktop:not(.even) .info {
+      p {
+        font-size: 22px;
+        padding-left: 410px;
+      }
+      h2 {
+        font-size: 30px;
       }
     }
   }
 }
+
 @media (max-width: 1600px) {
   .projects-container {
     .section-title {
       margin-left: 168px;
     }
-
-    .project.desktop.even {
-      .info {
-        p {
-          font-size: 16px;
-        }
-
-        h2 {
-          font-size: 30px;
-        }
+    .project.desktop.even .info {
+      p {
+        font-size: 16px;
+      }
+      h2 {
+        font-size: 30px;
       }
     }
-    .project.desktop:not(.even) {
-      .info {
-        p {
-          font-size: 16px;
-          padding-left: 344px;
-        }
-        h2 {
-          font-size: 30px;
-        }
-        .project-buttons {
-          flex-wrap: nowrap;
-        }
+    .project.desktop:not(.even) .info {
+      p {
+        font-size: 16px;
+        padding-left: 344px;
+      }
+      h2 {
+        font-size: 30px;
+      }
+      .project-buttons {
+        flex-wrap: nowrap;
       }
     }
   }
@@ -233,27 +212,21 @@ $orange: #ff692d;
     .section-title {
       margin-left: 147px;
     }
-
-    .project.desktop.even {
-      .info {
-        p {
-          font-size: 16px;
-        }
-
-        h2 {
-          font-size: 25px;
-        }
+    .project.desktop.even .info {
+      p {
+        font-size: 16px;
+      }
+      h2 {
+        font-size: 25px;
       }
     }
-    .project.desktop:not(.even) {
-      .info {
-        p {
-          font-size: 16px;
-          padding-left: 163px;
-        }
-        h2 {
-          font-size: 25px;
-        }
+    .project.desktop:not(.even) .info {
+      p {
+        font-size: 16px;
+        padding-left: 163px;
+      }
+      h2 {
+        font-size: 25px;
       }
     }
   }
@@ -264,85 +237,42 @@ $orange: #ff692d;
     .section-title {
       margin-left: 105px;
     }
-
-    .project.desktop.even {
-      .info {
-        p {
-          font-size: 15px;
-          width: 95%;
-        }
-
-        h2 {
-          font-size: 25px;
-        }
+    .project.desktop.even .info {
+      p {
+        font-size: 15px;
+        width: 95%;
+      }
+      h2 {
+        font-size: 25px;
       }
     }
-    .project.desktop:not(.even) {
-      .info {
-        p {
-          font-size: 15px;
-          padding: 0;
-        }
-        h2 {
-          font-size: 25px;
-        }
+    .project.desktop:not(.even) .info {
+      p {
+        font-size: 15px;
+        padding: 0;
+      }
+      h2 {
+        font-size: 25px;
       }
     }
   }
 }
 
-// @media (max-width: 768px) {
-//   .projects-container {
-//     .section-title {
-//       margin-left: 154px;
-//       font-size: 19px;
-//     }
-
-//     .project.desktop.even {
-//       .info {
-//         p {
-//           font-size: 15px;
-//           width: 95%;
-//         }
-
-//         h2 {
-//           font-size: 25px;
-//         }
-//       }
-//     }
-//     .project.desktop:not(.even) {
-//       .info {
-//         p {
-//           font-size: 15px;
-//           padding: 0;
-//         }
-//         h2 {
-//           font-size: 25px;
-//         }
-//       }
-//     }
-//   }
-// }
-
 @media (max-width: 768px) {
   .projects-container {
     .section-title {
-      padding: 50px 0 50px 152px; // ajustado según tu ejemplo
-      margin-left: 0; // lo removí para dar coherencia con el padding
-      font-size: 19px; // opcional, puedes conservarlo o ajustar
+      margin: 50px 0 50px 152px;
+      font-size: 19px;
     }
-
     .project.even .info {
       padding-right: 0;
     }
-
     .project .info p {
       font-size: 15px;
-      width: auto; // para evitar problemas con width estrecho
+      width: auto;
     }
   }
-
-  .project-buttons {
+  .project.desktop:not(.even) .project-buttons {
     flex-wrap: wrap;
     align-content: stretch;
     align-items: flex-end;
@@ -354,20 +284,16 @@ $orange: #ff692d;
   .desktop {
     display: none !important;
   }
-
   .projects-container {
     .section-title {
-      padding: 20px 0 50px 20px;
-      margin-left: 0; // para consistencia
+      margin: 50px 0 50px 20px;
     }
-
     .project.even p {
       width: 60%;
       text-align: justify;
       position: relative;
       left: 50px;
     }
-
     .project p {
       width: 60%;
       text-align: justify;
@@ -375,42 +301,33 @@ $orange: #ff692d;
       right: 50px;
     }
   }
-
   .project.mobile {
     display: flex !important;
     flex-direction: column;
     align-items: center;
     margin-bottom: 36px;
-
-    img {
+    .media {
       width: 100% !important;
-      max-width: 360px;
-      margin: 16px 0;
     }
-
     h2,
     p {
-      text-align: center;
-      margin: 0 0 12px 0;
+      text-align: justify !important;
+      margin: 20px !important;
     }
   }
-
   .project-buttons {
     display: flex;
+    flex-direction: column;
     gap: 10px;
-    position: relative;
-    right: -90px;
   }
   .project.even .project-buttons {
-    position: relative;
     left: -90px;
+    right: auto;
   }
-
   .project-gallery {
     display: flex;
     gap: 5px;
   }
-
   .projects-container .project:not(.even) img {
     order: 0;
   }

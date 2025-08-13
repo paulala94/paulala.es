@@ -2,7 +2,12 @@ $violet: #8879ce;
 $white: #ffffff;
 $orange: #ff692d;
 
-.hero {
+.hero-small,
+.hero-xs {
+  display: none;
+}
+
+.hero-big {
   position: relative;
   h1 {
     font-weight: 800;
@@ -16,11 +21,12 @@ $orange: #ff692d;
     text-align: center;
     span {
       position: relative;
-      top: 14px;
       z-index: 1;
     }
   }
   .logo {
+    position: relative;
+    top: -36px;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -50,8 +56,7 @@ $orange: #ff692d;
     top: -120px;
   }
 
-  .bg > .mask-wrap[data-text="DISEÑO"] span,
-  .bg > .mask-wrap.small span {
+  .bg > .mask-wrap[data-text="DISEÑO"] span {
     line-height: 1.2em !important;
   }
 }
@@ -72,94 +77,152 @@ $orange: #ff692d;
   }
 }
 
-// @media (max-width: 1140px) {
-//   .hero {
-//     h1 {
-//       font-size: 298px;
-//     }
-//     .bg {
-//       font-size: 298px;
-//     }
-//   }
-// }
+@media (max-width: 480px) {
+  .hero-big,
+  .hero-xs {
+    display: none;
+  }
+  .hero-small {
+    display: block;
+    position: relative;
+    top: 25px;
+    h1 {
+      font-weight: 800;
+      font-size: 46px;
+      padding: 0 5px;
+      color: $violet;
+      margin: 0;
+      padding: 0;
+      margin: auto;
+      text-align: center;
+      span {
+        position: relative;
+        top: 0;
+      }
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      position: relative;
+      top: -25px;
+    }
+    .web {
+      position: relative;
+      bottom: 89px;
+    }
+    span {
+      display: inline-block;
+      position: relative;
+    }
 
-// @media (max-width: 1024px) {
-//   .hero {
-//     h1 {
-//       font-size: 212px;
-//       line-height: 171px;
-//     }
-//     .bg {
-//       font-size: 212px;
-//       line-height: 171px;
-//       padding-top: 35px;
-//     }
-//   }
-// }
+    .bg {
+      font-weight: 800;
+      font-size: 70px;
+      color: $white;
+      background-color: $violet;
+      text-align: right;
+      overflow: hidden;
+      position: relative;
+      top: -120px;
+    }
 
-// @media (max-width: 768px) {
-//   .hero {
-//     h1 {
-//       font-size: 159px;
-//       line-height: 127px;
-//     }
-//     .bg {
-//       font-size: 159px;
-//       line-height: 127px;
-//     }
+    .bg > .mask-wrap[data-text="DISEÑO"] span {
+      line-height: 1.2em !important;
+    }
+  }
+  .mask-wrap {
+    display: inline-block;
+    overflow: hidden;
 
-//   }
-// }
+    span {
+      transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+      display: inline-block;
+      transform: translateY(100%);
+      transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+    &.in-view span {
+      transform: translateY(0%);
+    }
+  }
+}
 
-// @media (max-width: 480px) {
-//   .hero {
-//     h1 {
-//       font-size: 87px;
-//       line-height: 79px;
-//     }
-//     .bg {
-//       font-size: 87px;
-//       line-height: 79px;
-//     }
-//   }
-// }
-// @media (max-width: 430px) {
-//   .hero {
-//     h1 {
-//       font-size: 77px !important;
-//       line-height: 70px !important;
-//     }
-//     .bg {
-//       font-size: 77px !important;
-//       line-height: 70px !important;
-//     }
-//   }
-// }
+@media (max-width: 380px) {
+  .hero-big,
+  .hero-small {
+    display: none;
+  }
+  .hero-xs {
+    display: block;
+    position: relative;
+    top: 25px;
+    h1 {
+      font-weight: 800;
+      font-size: 46px;
+      padding: 0 5px;
+      color: $violet;
+      margin: 0;
+      padding: 0;
+      margin: auto;
+      text-align: center;
+      span {
+        position: relative;
+        top: 0;
+      }
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      position: relative;
+      top: -25px;
+    }
+    .web {
+      position: relative;
+      bottom: 78px;
+    }
+    span {
+      display: inline-block;
+      position: relative;
+    }
 
-// @media (max-width: 370px) {
-//   .hero {
-//     h1 {
-//       font-size: 66px !important;
-//       line-height: 70px !important;
-//     }
-//     .bg {
-//       font-size: 66px !important;
-//       line-height: 70px !important;
-//     }
+    .bg {
+      font-weight: 800;
+      font-size: 70px;
+      color: $white;
+      background-color: $violet;
+      text-align: right;
+      overflow: hidden;
+      position: relative;
+      top: -120px;
+    }
 
-//   }
-// }
+    .bg > .mask-wrap[data-text="DISEÑO"] span {
+      line-height: 1.2em !important;
+    }
+  }
+  .mask-wrap {
+    display: inline-block;
+    overflow: hidden;
 
-// @media (max-width: 320px) {
-//   .hero {
-//     h1 {
-//       font-size: 55px !important;
-//       line-height: 55px !important;
-//     }
-//     .bg {
-//       font-size: 65px !important;
-//       line-height: 56px !important;
-//     }
-
-//   }
-// }
+    span {
+      transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+      display: inline-block;
+      transform: translateY(100%);
+      transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+    &.in-view span {
+      transform: translateY(0%);
+    }
+  }
+}

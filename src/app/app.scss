@@ -21,22 +21,122 @@ html {
   min-height: 100%;
   will-change: transform;
 }
-.container {
-}
+
 @media (max-width: 2560px) {
-  .occult {
-    display: none;
+  h1 {
+    font-size: 44px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 35px;
   }
 }
 
-// @media (max-width: 768px) {
+@media (max-width: 1900px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 25px;
+  }
+}
+@media (max-width: 1600px) {
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 21px;
+  }
+}
 
+// @media (max-width: 1440px) {
+//   h1{
+//     font-size: ;
+//   }
+//   h2{
+//     font-size: ;
+//   }
+//   p{
+//     font-size: ;
+//   }
+// }
+
+// @media (max-width: 1140px) {
+//   h1{
+//     font-size: ;
+//   }
+//   h2{
+//     font-size: ;
+//   }
+//   p{
+//     font-size: ;
+//   }
+// }
+
+// @media (max-width: 1024px) {
+//   h1{
+//     font-size: ;
+//   }
+//   h2{
+//     font-size: ;
+//   }
+//   p{
+//     font-size: ;
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   h1{
+//     font-size: ;
+//   }
+//   h2{
+//     font-size: ;
+//   }
+//   p{
+//     font-size: ;
+//   }
 // }
 
 // @media (max-width: 480px) {
+//   h1{
+//     font-size: ;
+//   }
+//   h2{
+//     font-size: ;
+//   }
+//   p{
+//     font-size: ;
+//   }
+// }
 
+// @media (max-width: 380px) {
+//   h1{
+//     font-size: ;
+//   }
+//   h2{
+//     font-size: ;
+//   }
+//   p{
+//     font-size: ;
+//   }
 // }
 
 // @media (max-width: 320px) {
-//
+//   h1{
+//     font-size: ;
+//   }
+//   h2{
+//     font-size: ;
+//   }
+//   p{
+//     font-size: ;
+//   }
 // }
