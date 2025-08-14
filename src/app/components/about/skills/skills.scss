@@ -133,7 +133,7 @@ $violet: #8879ce;
 @media (max-width: 1140px) {
   .skills {
     li {
-      padding: 15px;
+      padding: 5px;
     }
   }
 }
@@ -147,7 +147,6 @@ $violet: #8879ce;
       justify-content: center;
     }
     li {
-      padding: 11px;
       font-size: 14px;
     }
   }
@@ -155,7 +154,6 @@ $violet: #8879ce;
 
 @media (max-width: 768px) {
   li {
-    padding: 7px;
     font-size: 11px;
   }
 }

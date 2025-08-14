@@ -17,6 +17,8 @@ $white: #fff;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    width: 95%;
+    margin: auto;
 
     .card {
       display: grid;
@@ -140,11 +142,152 @@ $white: #fff;
   }
 }
 
+@media (max-width: 2560px) {
+  .pricing-section {
+    .pricing-title {
+      font-size: 44px;
+    }
+    .pricing-cards {
+      gap: 24px;
+      .card {
+        padding: 40px;
+        h3 {
+          font-size: 40px;
+        }
+        ul {
+          font-size: 35px;
+        }
+        .prices {
+          span {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+    .disclaimer {
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: 1900px) {
+  .pricing-section {
+    .pricing-title {
+      font-size: 44px;
+    }
+    .pricing-cards {
+      .card {
+        padding: 20px;
+        h3 {
+          font-size: 40px;
+        }
+        ul {
+          font-size: 28px;
+        }
+        .prices {
+          span {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+    .disclaimer {
+      font-size: 28px;
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .pricing-section {
+    .pricing-title {
+      font-size: 30px;
+    }
+    .pricing-cards {
+      gap: 18px;
+      .card {
+        padding: 10px;
+        h3 {
+          font-size: 25px;
+        }
+        ul {
+          font-size: 20px;
+        }
+        .prices {
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .disclaimer {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .pricing-section {
+    .pricing-title {
+      font-size: 28px;
+    }
+    .pricing-cards {
+      .card {
+        padding: 8px;
+        h3 {
+          font-size: 20px;
+        }
+        ul {
+          font-size: 15px;
+        }
+        .prices {
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .disclaimer {
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .pricing-section {
+    margin: auto;
+    width: 80%;
+    .pricing-title {
+      font-size: 26px;
+      position: relative;
+      left: -121px;
+    }
+    .pricing-cards {
+      .card {
+        padding: 8px 0;
+        h3 {
+          font-size: 18px;
+        }
+        ul {
+          font-size: 14px;
+        }
+        .prices {
+          span {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+    .disclaimer {
+      font-size: 12px;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .pricing-section {
     .pricing-title {
       padding: 20px 0 50px 20px;
       margin-top: 0;
+      left: 0;
     }
     .pricing-cards {
       gap: 24px;
@@ -159,21 +302,10 @@ $white: #fff;
           width: 25%;
           margin-bottom: 20px;
         }
-
-        h3 {
-          font-size: 1.15em;
-        }
-        ul li {
-          font-size: 0.95em;
-        }
-        .prices span {
-          font-size: 0.95em;
-        }
       }
     }
     .disclaimer {
       padding: 0 20px;
-      font-size: 0.9em;
       margin-bottom: 50px;
     }
   }

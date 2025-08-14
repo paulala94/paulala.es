@@ -10,7 +10,7 @@ $orange: #ff692d;
 
 .modal-content {
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
@@ -19,6 +19,8 @@ $orange: #ff692d;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   width: 90%;
   max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
 
   h2 {
     margin-bottom: 1rem;
