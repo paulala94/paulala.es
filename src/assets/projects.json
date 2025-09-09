@@ -1,6 +1,6 @@
 [
   {
-    "title": "Web cine",
+    "title": "Virginia Rita Luengo — Web cine",
     "img": "./vir-img.jpg",
     "video": "./vir-video.mp4",
     "link": [
@@ -35,5 +35,16 @@
       }
     ],
     "description": "Frontend colaborativo para startup: plataforma de datos abiertos para ayuntamientos con diseño claro, accesible y moderno."
+  },
+  {
+    "title": "Marina y sus telares — Web de arreglos florales",
+    "video": "./marina-video.mp4",
+    "link": [
+      {
+        "name": "Visitar",
+        "url": "https://marinaysustelares.com/"
+      }
+    ],
+    "description": "Un escaparate elegante de arreglos florales artesanales, pensado para inspirar y cautivar."
   }
 ]
