@@ -150,6 +150,13 @@ $orange: #ff692d;
     }
   }
 }
+@media (max-width: 425px) {
+  .hero-big {
+    .desarrollo img {
+      left: 393px;
+    }
+  }
+}
 
 @media (max-width: 380px) {
   .hero-big {
