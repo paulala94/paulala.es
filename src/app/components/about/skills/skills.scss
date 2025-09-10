@@ -20,17 +20,9 @@ $violet: #8879ce;
     font-size: 17px;
     font-weight: 800;
 
+    /* Estado inicial (GSAP lo usa) */
     opacity: 0;
     transform: translateY(90px);
-    clip-path: inset(40% 0 0 0);
-    transition: transform 0.35s linear, opacity 0.35s linear,
-      clip-path 0.35s linear, box-shadow 0.3s linear;
-
-    &.animate {
-      opacity: 1;
-      transform: translateY(0);
-      clip-path: inset(0 0 0 0);
-    }
 
     &:hover {
       color: white;
@@ -52,39 +44,7 @@ $violet: #8879ce;
   }
 }
 
-@keyframes bounce-in-bottom {
-  0% {
-    transform: translateY(500px);
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  38% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  55% {
-    transform: translateY(30px);
-    animation-timing-function: ease-in;
-  }
-  72% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-  81% {
-    transform: translateY(10px);
-    animation-timing-function: ease-in;
-  }
-  90% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
+/* 🔹 RESPONSIVE BREAKPOINTS */
 @media (max-width: 2560px) {
   .skills {
     li {
@@ -106,7 +66,6 @@ $violet: #8879ce;
     }
   }
 }
-
 @media (max-width: 1440px) {
   .skills {
     li {
@@ -121,7 +80,6 @@ $violet: #8879ce;
     }
   }
 }
-
 @media (max-width: 1180px) {
   .skills {
     li {
@@ -129,7 +87,6 @@ $violet: #8879ce;
     }
   }
 }
-
 @media (max-width: 1140px) {
   .skills {
     li {
@@ -137,7 +94,6 @@ $violet: #8879ce;
     }
   }
 }
-
 @media (max-width: 1024px) {
   .skills {
     margin-left: 0;
@@ -151,13 +107,11 @@ $violet: #8879ce;
     }
   }
 }
-
 @media (max-width: 768px) {
   li {
     font-size: 11px;
   }
 }
-
 @media (max-width: 480px) {
   .skills {
     margin-bottom: -298px !important;
@@ -175,7 +129,6 @@ $violet: #8879ce;
     }
   }
 }
-
 @media (max-width: 450px) {
   .skills {
     ul {
@@ -184,7 +137,6 @@ $violet: #8879ce;
     }
   }
 }
-
 @media (max-width: 380px) {
   .skills {
     ul {

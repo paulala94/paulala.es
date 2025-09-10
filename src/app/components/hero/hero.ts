@@ -1,5 +1,6 @@
 import { Component, AfterViewInit, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-hero',
@@ -12,87 +13,52 @@ export class Hero implements AfterViewInit {
   constructor(private el: ElementRef) {}
 
   ngAfterViewInit(): void {
-    const delayStep = 150;
-
-    // 1. Animación secuencial para .logo .mask-wrap (al cargar)
-    const logoMasks = Array.from(
-      this.el.nativeElement.querySelectorAll('.logo .mask-wrap')
+    // Seleccionamos todas las imágenes dentro del logo
+    const logoImgs = Array.from(
+      this.el.nativeElement.querySelectorAll('.logo .mask-wrap img')
     ) as HTMLElement[];
-    logoMasks.forEach((mask, i) => {
-      setTimeout(() => {
-        mask.classList.add('in-view');
-      }, i * 600); // 600 ms entre cada una
+
+    // Animación inicial con GSAP (fade-in + slide-up relativo)
+    gsap.from(logoImgs, {
+      opacity: 0,
+      yPercent: 100, // 🔹 relativo → no pisa tu transform del SCSS
+      duration: 1,
+      ease: 'bounce.out',
+      stagger: 0.25,
     });
 
-    // 2. Resto de lógicas para otros bloques, como tenías...
-    const allMaskWraps = Array.from(
-      this.el.nativeElement.querySelectorAll('.mask-wrap')
-    ) as HTMLElement[];
-    const bgMaskWraps = Array.from(
-      this.el.nativeElement.querySelectorAll('.bg .mask-wrap')
-    ) as HTMLElement[];
-
-    const standaloneSpans = allMaskWraps.filter(
-      (el) => !bgMaskWraps.includes(el)
-    );
-
-    // IntersectionObserver para .bg
+    // 🔹 Animación para los bloques .bg (ej. en móvil)
     const bgBlocks = Array.from(
       this.el.nativeElement.querySelectorAll('.bg')
     ) as HTMLElement[];
 
     bgBlocks.forEach((bg) => {
       const wordSpans = Array.from(
-        bg.querySelectorAll('.mask-wrap')
+        bg.querySelectorAll('.mask-wrap img')
       ) as HTMLElement[];
-      wordSpans.forEach((span) => span.classList.remove('in-view'));
+
+      // Estado inicial
+      gsap.set(wordSpans, { opacity: 0, yPercent: 100 });
 
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              wordSpans.forEach((span, i) => {
-                setTimeout(() => span.classList.add('in-view'), i * delayStep);
+              gsap.to(wordSpans, {
+                opacity: 1,
+                yPercent: 0,
+                duration: 0.9,
+                ease: 'power2.out',
+                stagger: 0.15,
               });
               observer.disconnect();
             }
           });
         },
-        { threshold: 0.5 }
+        { threshold: 0.4 }
       );
 
       observer.observe(bg);
-    });
-
-    // Animación con IntersectionObserver para otros contenedores
-    const parentGroups = new Map<HTMLElement, HTMLElement[]>();
-
-    standaloneSpans.forEach((span) => {
-      const parent = span.parentElement!;
-      if (!parentGroups.has(parent)) {
-        parentGroups.set(parent, []);
-      }
-      parentGroups.get(parent)!.push(span);
-    });
-
-    parentGroups.forEach((spans, container) => {
-      spans.forEach((span) => span.classList.remove('in-view'));
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              spans.forEach((span, i) => {
-                setTimeout(() => span.classList.add('in-view'), i * delayStep);
-              });
-              observer.disconnect();
-            }
-          });
-        },
-        { threshold: 0.5 }
-      );
-
-      observer.observe(container);
     });
   }
 }
