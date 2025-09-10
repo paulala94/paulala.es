@@ -13,21 +13,18 @@ export class Hero implements AfterViewInit {
   constructor(private el: ElementRef) {}
 
   ngAfterViewInit(): void {
-    // Seleccionamos todas las imágenes dentro del logo
     const logoImgs = Array.from(
       this.el.nativeElement.querySelectorAll('.logo .mask-wrap img')
     ) as HTMLElement[];
 
-    // Animación inicial con GSAP (fade-in + slide-up relativo)
     gsap.from(logoImgs, {
       opacity: 0,
-      yPercent: 100, // 🔹 relativo → no pisa tu transform del SCSS
+      yPercent: 100,
       duration: 1,
       ease: 'bounce.out',
       stagger: 0.25,
     });
 
-    // 🔹 Animación para los bloques .bg (ej. en móvil)
     const bgBlocks = Array.from(
       this.el.nativeElement.querySelectorAll('.bg')
     ) as HTMLElement[];
@@ -37,7 +34,6 @@ export class Hero implements AfterViewInit {
         bg.querySelectorAll('.mask-wrap img')
       ) as HTMLElement[];
 
-      // Estado inicial
       gsap.set(wordSpans, { opacity: 0, yPercent: 100 });
 
       const observer = new IntersectionObserver(

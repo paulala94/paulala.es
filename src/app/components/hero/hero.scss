@@ -51,152 +51,307 @@ $orange: #ff692d;
   }
 }
 
-@media (max-width: 480px) {
-  .hero-big,
-  .hero-xs {
-    display: none;
-  }
-  .hero-small {
-    display: block;
-    position: relative;
-    top: 25px;
-    h1 {
-      font-weight: 800;
-      font-size: 46px;
-      padding: 0 5px;
-      color: $violet;
-      margin: 0;
-      padding: 0;
-      margin: auto;
-      text-align: center;
-      span {
-        position: relative;
-        top: 0;
-      }
-    }
+// @media (max-width: 480px) {
+//   .hero-big,
+//   .hero-xs {
+//     display: none;
+//   }
+//   .hero-small {
+//     display: block;
+//     position: relative;
+//     top: 25px;
+//     h1 {
+//       font-weight: 800;
+//       font-size: 46px;
+//       padding: 0 5px;
+//       color: $violet;
+//       margin: 0;
+//       padding: 0;
+//       margin: auto;
+//       text-align: center;
+//       span {
+//         position: relative;
+//         top: 0;
+//       }
+//     }
+//     .logo {
+//       display: flex;
+//       flex-direction: column;
+//       width: 50%;
+//       justify-content: center;
+//       align-items: center;
+//       margin: auto;
+//       position: relative;
+//       top: -25px;
+//     }
+//     .web {
+//       position: relative;
+//       bottom: 89px;
+//     }
+//     span {
+//       display: inline-block;
+//       position: relative;
+//     }
+
+//     .bg {
+//       font-weight: 800;
+//       font-size: 70px;
+//       color: $white;
+//       background-color: $violet;
+//       text-align: right;
+//       overflow: hidden;
+//       position: relative;
+//       top: -120px;
+//     }
+
+//     .bg > .mask-wrap[data-text="DISEÑO"] span {
+//       line-height: 1.2em !important;
+//     }
+//   }
+//   .mask-wrap {
+//     display: inline-block;
+//     overflow: hidden;
+
+//     span {
+//       transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+//       display: inline-block;
+//       transform: translateY(100%);
+//       transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+//       will-change: transform;
+//       backface-visibility: hidden;
+//     }
+//     &.in-view span {
+//       transform: translateY(0%);
+//     }
+//   }
+// }
+
+// @media (max-width: 380px) {
+//   .hero-big,
+//   .hero-small {
+//     display: none;
+//   }
+//   .hero-xs {
+//     display: block;
+//     position: relative;
+//     top: 25px;
+//     h1 {
+//       font-weight: 800;
+//       font-size: 46px;
+//       padding: 0 5px;
+//       color: $violet;
+//       margin: 0;
+//       padding: 0;
+//       margin: auto;
+//       text-align: center;
+//       span {
+//         position: relative;
+//         top: 0;
+//       }
+//     }
+//     .logo {
+//       display: flex;
+//       flex-direction: column;
+//       width: 50%;
+//       justify-content: center;
+//       align-items: center;
+//       margin: auto;
+//       position: relative;
+//       top: -25px;
+//     }
+//     .web {
+//       position: relative;
+//       bottom: 78px;
+//     }
+//     span {
+//       display: inline-block;
+//       position: relative;
+//     }
+
+//     .bg {
+//       font-weight: 800;
+//       font-size: 70px;
+//       color: $white;
+//       background-color: $violet;
+//       text-align: right;
+//       overflow: hidden;
+//       position: relative;
+//       top: -120px;
+//     }
+
+//     .bg > .mask-wrap[data-text="DISEÑO"] span {
+//       line-height: 1.2em !important;
+//     }
+//   }
+//   .mask-wrap {
+//     display: inline-block;
+//     overflow: hidden;
+
+//     span {
+//       transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+//       display: inline-block;
+//       transform: translateY(100%);
+//       transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+//       will-change: transform;
+//       backface-visibility: hidden;
+//     }
+//     &.in-view span {
+//       transform: translateY(0%);
+//     }
+//   }
+// }
+
+@media (max-width: 2560px) {
+  .hero-big {
+    height: 360px;
     .logo {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      justify-content: center;
-      align-items: center;
-      margin: auto;
-      position: relative;
-      top: -25px;
-    }
-    .web {
-      position: relative;
-      bottom: 89px;
-    }
-    span {
-      display: inline-block;
-      position: relative;
-    }
-
-    .bg {
-      font-weight: 800;
-      font-size: 70px;
-      color: $white;
-      background-color: $violet;
-      text-align: right;
-      overflow: hidden;
-      position: relative;
-      top: -120px;
-    }
-
-    .bg > .mask-wrap[data-text="DISEÑO"] span {
-      line-height: 1.2em !important;
+      left: 38%;
     }
   }
-  .mask-wrap {
-    display: inline-block;
-    overflow: hidden;
+}
 
-    span {
-      transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
-      display: inline-block;
-      transform: translateY(100%);
-      transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
-      will-change: transform;
-      backface-visibility: hidden;
+@media (max-width: 1900px) {
+  .hero-big {
+    .logo {
+      left: 35%;
     }
-    &.in-view span {
-      transform: translateY(0%);
+  }
+}
+@media (max-width: 1600px) {
+  .hero-big {
+    .logo {
+      left: 30%;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .hero-big {
+    .logo {
+      left: 29%;
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .hero-big {
+    .logo {
+      left: 23%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-big {
+    .logo {
+      left: 21%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-big {
+    .paulala img {
+      width: 247%;
+    }
+    .disenyo img {
+      top: 30px;
+      left: 115%;
+      height: 70px;
+    }
+    .desarrollo img {
+      left: 497px;
+      top: 63px;
+      height: 49px;
+    }
+    .web img {
+      top: 109px;
+      left: 223%;
+      height: 52px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-big {
+    height: 150px;
+    .logo {
+      left: 35%;
+      .paulala img {
+        position: relative;
+        width: 148%;
+        top: -143px;
+      }
+      .disenyo img {
+        top: -125px;
+        left: 70%;
+        height: 41px;
+      }
+      .desarrollo img {
+        left: 275px;
+        top: -105px;
+        height: 27px;
+      }
+      .web img {
+        top: -85px;
+        left: 133%;
+        height: 32px;
+      }
     }
   }
 }
 
 @media (max-width: 380px) {
-  .hero-big,
-  .hero-small {
-    display: none;
-  }
-  .hero-xs {
-    display: block;
-    position: relative;
-    top: 25px;
-    h1 {
-      font-weight: 800;
-      font-size: 46px;
-      padding: 0 5px;
-      color: $violet;
-      margin: 0;
-      padding: 0;
-      margin: auto;
-      text-align: center;
-      span {
+  .hero-big {
+    height: 136px;
+    .logo {
+      left: 35%;
+      .paulala img {
         position: relative;
-        top: 0;
+        width: 148%;
+        top: -143px;
       }
     }
-    .logo {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      justify-content: center;
-      align-items: center;
-      margin: auto;
-      position: relative;
-      top: -25px;
+    .disenyo img {
+      top: -125px !important;
+      left: 70% !important;
+      height: 36px !important;
     }
-    .web {
-      position: relative;
-      bottom: 78px;
+    .desarrollo img {
+      left: 241px !important;
+      top: -110px !important;
+      height: 23px !important;
     }
-    span {
-      display: inline-block;
-      position: relative;
-    }
-
-    .bg {
-      font-weight: 800;
-      font-size: 70px;
-      color: $white;
-      background-color: $violet;
-      text-align: right;
-      overflow: hidden;
-      position: relative;
-      top: -120px;
-    }
-
-    .bg > .mask-wrap[data-text="DISEÑO"] span {
-      line-height: 1.2em !important;
+    .web img {
+      top: -92px !important;
+      left: 133% !important;
+      height: 29px !important;
     }
   }
-  .mask-wrap {
-    display: inline-block;
-    overflow: hidden;
+}
 
-    span {
-      transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
-      display: inline-block;
-      transform: translateY(100%);
-      transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
-      will-change: transform;
-      backface-visibility: hidden;
+@media (max-width: 320px) {
+  .hero-big {
+    .logo {
+      left: 35%;
+      .paulala img {
+        width: 153%;
+      }
     }
-    &.in-view span {
-      transform: translateY(0%);
+    .disenyo img {
+      top: -130px !important;
+      left: 71% !important;
+      height: 30px !important;
+    }
+    .desarrollo img {
+      left: 216px !important;
+      top: -117px !important;
+      height: 22px !important;
+    }
+    .web img {
+      top: -99px !important;
+      left: 138% !important;
+      height: 24px !important;
     }
   }
 }
