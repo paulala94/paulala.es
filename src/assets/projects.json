@@ -9,7 +9,8 @@
         "url": "https://virginiaritaluengo.vercel.app/"
       }
     ],
-    "description": "Web minimalista y elegante para mostrar el porfolio audiovisual de Virginia Rita en todos los dispositivos."
+    "description": "Web minimalista y elegante para mostrar el porfolio audiovisual de Virginia Rita en todos los dispositivos.",
+    "stack": ["Vue.js", "Javascript", "CSS"]
   },
   {
     "title": "Proyecto Encifras — Pickgeo",
@@ -34,7 +35,8 @@
         "url": "https://vitoria.pickgeo.com/"
       }
     ],
-    "description": "Frontend colaborativo para startup: plataforma de datos abiertos para ayuntamientos con diseño claro, accesible y moderno."
+    "description": "Frontend colaborativo para startup: plataforma de datos abiertos para ayuntamientos con diseño claro, accesible y moderno.",
+    "stack": ["Vue.js", "Javascript", "CSS", "Mapbox", "Apex Charts", "NaiveUI"]
   },
   {
     "title": "Marina y sus telares — Web de arreglos florales",
@@ -45,6 +47,7 @@
         "url": "https://marinaysustelares.com/"
       }
     ],
-    "description": "Un escaparate elegante de arreglos florales artesanales, pensado para inspirar y cautivar."
+    "description": "Un escaparate elegante de arreglos florales artesanales, pensado para inspirar y cautivar.",
+    "stack": ["WordPress", "Divi", "Figma"]
   }
 ]
