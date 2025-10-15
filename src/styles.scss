@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
 
 $violet: #8879ce;
 $white: #ffffff;
-$orange: #ff692d;
+$orange: #ff8f52;
 
 * {
   margin: 0;
@@ -17,6 +18,9 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+h2 {
+  font-family: "Pixelify Sans", sans-serif;
+}
 #smooth-wrapper {
   height: 100vh;
   overflow: hidden;
@@ -25,4 +29,33 @@ body {
 #smooth-content {
   min-height: 100%;
   will-change: transform;
+}
+
+@media (max-width: 2560px) {
+  h2 {
+    font-size: 44px !important;
+  }
+}
+
+@media (max-width: 1900px) {
+  h2 {
+    font-size: 30px !important;
+  }
+}
+@media (max-width: 1600px) {
+  h2 {
+    font-size: 30px !important;
+  }
+}
+
+@media (max-width: 1440px) {
+  h2 {
+    font-size: 30px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 24px !important;
+  }
 }
