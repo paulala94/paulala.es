@@ -9,6 +9,7 @@ import { Tariffs } from './components/tariffs/tariffs';
 import { Faq } from './components/faq/faq';
 import { Contact } from './components/contact/contact';
 import { Footer } from './components/footer/footer';
+import { BackToTopComponent } from './components/back-to-top/back-to-top';
 
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -29,6 +30,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
     Faq,
     Contact,
     Footer,
+    BackToTopComponent,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
