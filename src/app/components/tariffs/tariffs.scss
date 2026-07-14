@@ -176,8 +176,53 @@ $smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
           color: white;
         }
       }
+
+      // Dos precios lado a lado con el mismo peso visual
+      // (One Page y Web Completa: "Solo diseño" vs "+ mantenimiento 1 año")
+      .price-options {
+        display: flex;
+        align-items: center;
+        gap: $space-md;
+        flex-wrap: wrap;
+        margin-bottom: 4px;
+
+        .price-option {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+
+          .label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: $white;
+            font-weight: 600;
+            opacity: 0.9;
+            white-space: nowrap;
+          }
+
+          .amount {
+            font-size: clamp(22px, 4.5vw, 28px);
+            font-weight: 700;
+            color: white;
+            white-space: nowrap;
+          }
+        }
+
+        .price-divider {
+          width: 1px;
+          align-self: stretch;
+          min-height: 38px;
+          background: rgba(255, 255, 255, 0.35);
+
+          @media (max-width: 480px) {
+            display: none;
+          }
+        }
+      }
+
       .price-note {
-        font-size: 12px;
+        font-size: 14px;
         color: $white;
         margin: 0;
       }
