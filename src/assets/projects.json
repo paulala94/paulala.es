@@ -12,18 +12,42 @@
     "description": "Web minimalista y elegante para mostrar el porfolio audiovisual de Virginia Rita en todos los dispositivos.",
     "stack": ["Vue.js", "Javascript", "CSS"]
   },
+  {
+    "title": "Extremadura Alimenta — Red de artesanos extremeños ",
+    "video": "./video-extremadura.mp4",
+    "link": [
+      {
+        "name": "Visitar",
+        "url": "https://extremaduraalimenta.es/"
+      }
+    ],
+    "description": "Plataforma digital para la red de artesanía alimentaria de Extremadura. Conecta productores, amplifica visibilidad y facilita su crecimiento en la red.",
+    "stack": ["WordPress", "Elementor Free"]
+  },
     {
     "title": "EOI Almería",
-    "img": "./vir-img.jpg",
-    "video": "./vir-video.mp4",
+    "img": "./eoi-almeria.png",
+    "video": "./eoi-almeria.mp4",
     "link": [
       {
         "name": "Visitar",
         "url": "https://www.eoialmeria.es/"
       }
     ],
-    "description": "Web minimalista y elegante para mostrar el porfolio audiovisual de Virginia Rita en todos los dispositivos.",
-    "stack": ["Wordpress", "Elementor"]
+    "description": "Web sencilla y clara para la Escuela Oficial de Idiomas de Almería, con un diseño moderno y accesible.",
+    "stack": ["Wordpress", "Elementor Free", "Figma"]
+  },
+   {
+    "title": "Marina y sus telares — Web de arreglos florales",
+    "video": "./marina-video.mp4",
+    "link": [
+      {
+        "name": "Visitar",
+        "url": "https://marinaysustelares.com/"
+      }
+    ],
+    "description": "Un escaparate elegante de arreglos florales artesanales, pensado para inspirar y cautivar.",
+    "stack": ["WordPress", "Divi", "Figma"]
   },
   {
     "title": "Proyecto Encifras — Pickgeo",
@@ -50,17 +74,5 @@
     ],
     "description": "Frontend colaborativo para startup: plataforma de datos abiertos para ayuntamientos con diseño claro, accesible y moderno.",
     "stack": ["Vue.js", "Javascript", "CSS", "Mapbox", "Apex Charts", "NaiveUI"]
-  },
-  {
-    "title": "Marina y sus telares — Web de arreglos florales",
-    "video": "./marina-video.mp4",
-    "link": [
-      {
-        "name": "Visitar",
-        "url": "https://marinaysustelares.com/"
-      }
-    ],
-    "description": "Un escaparate elegante de arreglos florales artesanales, pensado para inspirar y cautivar.",
-    "stack": ["WordPress", "Divi", "Figma"]
   }
 ]

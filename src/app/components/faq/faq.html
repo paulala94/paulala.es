@@ -9,7 +9,10 @@
         [attr.aria-controls]="'faq-answer-' + i"
         id="faq-question-{{ i }}"
       >
-        {{ item.question }}
+        <span class="mask-wrap">
+          <span class="faq-q-text">{{ item.question }}</span>
+          <span class="faq-q-text" aria-hidden="true">{{ item.question }}</span>
+        </span>
 
         <img
           class="arrow"

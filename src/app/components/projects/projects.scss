@@ -1,4 +1,3 @@
-// Variables
 :root {
   --color-violet: #8879ce;
   --color-orange: #ff692d;
@@ -25,6 +24,9 @@
   .projects-header {
     margin-bottom: var(--spacing-2xl);
     position: relative;
+    width: 80%;
+    margin: auto;
+    padding: 60px 0 40px 0;
 
     .section-title {
       font-size: clamp(28px, 5vw, 48px);

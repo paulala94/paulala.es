@@ -1,104 +1,240 @@
-<section class="pricing-section" id="tariffs">
-  <h2 class="pricing-title">Tarifas</h2>
-  <div class="pricing-cards">
-    <div
-      class="card web"
-      (mouseenter)="hoveredIndex = 0"
-      (mouseleave)="hoveredIndex = null"
-    >
-      <img class="icon" src="assets/img/monitor.svg" alt="OnePage" />
-      <h3>One Page</h3>
-      <ul>
-        <li>Landing visual moderna</li>
-        <li>Formulario y RRSS</li>
-        <li>Responsive total</li>
-      </ul>
-      <div class="prices">
-        <span><strong>WordPress:</strong> 300 - 950 €</span>
-        <span><strong>A medida:</strong> 600 - 1.600 €</span>
-      </div>
-      <app-button
-        label="Pide presupuesto"
-        [variant]="hoveredIndex === 0 ? 'secondary' : 'primary'"
-        (onClick)="openPricingForm('One Page')"
-      ></app-button>
-    </div>
+<div class="tariffs-container" id="tariffs">
+  <div class="tariffs-header">
+    <h2 class="section-title">Tarifas</h2>
+    <div class="title-accent"></div>
+  </div>
 
-    <div
-      class="card web"
-      (mouseenter)="hoveredIndex = 1"
-      (mouseleave)="hoveredIndex = null"
-    >
-      <img class="icon" src="assets/img/puzzle.svg" alt="Web Completa" />
-      <h3>Web Completa</h3>
-      <ul>
-        <li>5-7 secciones</li>
-        <li>Diseño único</li>
-        <li>Integración blog o portfolio</li>
-      </ul>
-      <div class="prices">
-        <span><strong>WordPress:</strong> 700 - 1.800 €</span>
-        <span><strong>A medida:</strong> 1.000 - 3.000 €</span>
-      </div>
-      <app-button
-        label="Pide presupuesto"
-        [variant]="hoveredIndex === 1 ? 'secondary' : 'primary'"
-        (onClick)="openPricingForm('Web Completa')"
-      ></app-button>
-    </div>
+  <!-- PROYECTOS -->
+  <div class="tariffs-section">
+    <h3 class="section-subtitle">Proyectos web</h3>
 
-    <div
-      class="card other"
-      (mouseenter)="hoveredIndex = 2"
-      (mouseleave)="hoveredIndex = null"
-    >
-      <img class="icon" src="assets/img/stylo.svg" alt="Prototipado Figma" />
-      <h3>Prototipado Figma</h3>
-      <ul>
-        <li>Wireframe & prototipo validable</li>
-        <li>Entrega editable</li>
-        <li>UX/UI adaptado a tus necesidades</li>
-      </ul>
-      <div class="prices">
-        <span><strong>WordPress:</strong> 120 - 280 €/pág.</span>
-        <span><strong>A medida:</strong> 170 - 400 €/pág.</span>
+    <div class="tariffs-grid">
+      <div
+        class="tariff-card"
+        (mouseenter)="hoveredIndex = 0"
+        (mouseleave)="hoveredIndex = null"
+      >
+        <div class="card-icon">
+          <img src="assets/img/monitor.svg" alt="One Page" />
+        </div>
+        <div class="card-content">
+          <h3>One Page</h3>
+          <p class="card-description">Landing visual moderna y funcional</p>
+          <div class="price-section">
+            <div class="base-price">
+              <span class="label">Desde</span>
+              <span class="amount">300 €</span>
+            </div>
+            <p class="price-note">WordPress · a medida desde 600 €</p>
+          </div>
+          <ul class="features-list">
+            <li>Diseño único y moderno</li>
+            <li>Formulario de contacto</li>
+            <li>Integración con redes sociales</li>
+            <li>100% responsive</li>
+          </ul>
+          <app-button
+            label="Pide presupuesto"
+            [variant]="hoveredIndex === 0 ? 'secondary' : 'primary'"
+            (onClick)="openPricingForm('One Page')"
+          ></app-button>
+        </div>
       </div>
-      <app-button
-        label="Solicita un prototipo"
-        [variant]="hoveredIndex === 2 ? 'secondary' : 'primary'"
-        (onClick)="openPricingForm('Prototipado')"
-      ></app-button>
-    </div>
 
-    <div
-      class="card other"
-      (mouseenter)="hoveredIndex = 3"
-      (mouseleave)="hoveredIndex = null"
-    >
-      <img class="icon" src="assets/img/tool.svg" alt="Mantenimiento Web" />
-      <h3>Mantenimiento Web</h3>
-      <ul>
-        <li>Actualizaciones y copias</li>
-        <li>Pequeños cambios incluidos</li>
-        <li>Soporte directo</li>
-      </ul>
-      <div class="prices">
-        <span><strong>WordPress:</strong> 20 - 50 €/mes</span>
-        <span><strong>A medida:</strong> 35 - 80 €/mes</span>
+      <div
+        class="tariff-card"
+        (mouseenter)="hoveredIndex = 1"
+        (mouseleave)="hoveredIndex = null"
+      >
+        <div class="card-icon">
+          <img src="assets/img/puzzle.svg" alt="Web Completa" />
+        </div>
+        <div class="card-content">
+          <h3>Web Completa</h3>
+          <p class="card-description">Sitio profesional con todas sus secciones</p>
+          <div class="price-section">
+            <div class="base-price">
+              <span class="label">Desde</span>
+              <span class="amount">700 €</span>
+            </div>
+            <p class="price-note">WordPress · a medida desde 1.000 €</p>
+          </div>
+          <ul class="features-list">
+            <li>5-7 secciones personalizadas</li>
+            <li>Blog o portfolio integrado</li>
+            <li>Formularios optimizados</li>
+            <li>SEO básico incluido</li>
+          </ul>
+          <app-button
+            label="Pide presupuesto"
+            [variant]="hoveredIndex === 1 ? 'secondary' : 'primary'"
+            (onClick)="openPricingForm('Web Completa')"
+          ></app-button>
+        </div>
       </div>
-      <app-button
-        label="Pide presupuesto"
-        [variant]="hoveredIndex === 3 ? 'secondary' : 'primary'"
-        (onClick)="openPricingForm('Mantenimiento')"
-      ></app-button>
+
+      <div
+        class="tariff-card"
+        (mouseenter)="hoveredIndex = 2"
+        (mouseleave)="hoveredIndex = null"
+      >
+        <div class="card-icon">
+          <img src="assets/img/stylo.svg" alt="Prototipado Figma" />
+        </div>
+        <div class="card-content">
+          <h3>Prototipado en Figma</h3>
+          <p class="card-description">Valida tu idea antes de desarrollarla</p>
+          <div class="price-section">
+            <div class="base-price">
+              <span class="label">Por página</span>
+              <span class="amount">120 €</span>
+            </div>
+            <p class="price-note">Entrega editable · a medida desde 170 €/pág.</p>
+          </div>
+          <ul class="features-list">
+            <li>Wireframe detallado</li>
+            <li>Prototipo interactivo</li>
+            <li>UX/UI adaptado a tu marca</li>
+            <li>Archivo editable de entrega</li>
+          </ul>
+          <app-button
+            label="Solicita un prototipo"
+            [variant]="hoveredIndex === 2 ? 'secondary' : 'primary'"
+            (onClick)="openPricingForm('Prototipado')"
+          ></app-button>
+        </div>
+      </div>
+
+      <div
+        class="tariff-card"
+        (mouseenter)="hoveredIndex = 3"
+        (mouseleave)="hoveredIndex = null"
+      >
+        <div class="card-icon">
+          <img src="assets/img/tool.svg" alt="Mantenimiento Web" />
+        </div>
+        <div class="card-content">
+          <h3>Mantenimiento</h3>
+          <p class="card-description">Tu web siempre actualizada y segura</p>
+          <div class="price-section">
+            <div class="base-price">
+              <span class="label">Desde</span>
+              <span class="amount">15 €/mes</span>
+            </div>
+            <p class="price-note">Ver planes completos abajo</p>
+          </div>
+          <ul class="features-list">
+            <li>Cambios de texto, imagen y enlaces</li>
+            <li>Copias de seguridad</li>
+            <li>Revisión estética y funcional</li>
+            <li>Soporte directo</li>
+          </ul>
+          <app-button
+            label="Conocer planes"
+            [variant]="hoveredIndex === 3 ? 'secondary' : 'primary'"
+            (onClick)="openPricingForm('Mantenimiento')"
+          ></app-button>
+        </div>
+      </div>
     </div>
   </div>
 
-  <p class="disclaimer">
-    *Precios orientativos. IVA no incluido. Cada web es única: ajusto cada
+  <!-- PLANES DE MANTENIMIENTO -->
+  <div class="tariffs-section">
+    <h3 class="section-subtitle">Planes de mantenimiento (al mes)</h3>
+
+    <div class="extras-grid">
+      <div class="extra-card">
+        <h4>Plan Básico</h4>
+        <div class="price-section">
+          <div class="base-price"><span class="amount">15 €/mes</span></div>
+          <p class="price-note">≈ 30 min al mes</p>
+        </div>
+        <p class="extra-description">
+          Hasta 2 pequeños cambios al mes: texto, imagen o enlaces, con revisión básica.
+        </p>
+      </div>
+
+      <div class="extra-card">
+        <h4>Plan Medio</h4>
+        <div class="price-section">
+          <div class="base-price"><span class="amount">30 €/mes</span></div>
+          <p class="price-note">Hasta 2 h al mes</p>
+        </div>
+        <p class="extra-description">
+          Cambios, añadir secciones sencillas y revisión de formularios.
+        </p>
+      </div>
+
+      <div class="extra-card">
+        <h4>Plan Pro</h4>
+        <div class="price-section">
+          <div class="base-price"><span class="amount">60 €/mes</span></div>
+          <p class="price-note">Hasta 5 h al mes</p>
+        </div>
+        <p class="extra-description">
+          Prioridad, modificación de páginas, subida de contenidos y revisión mensual.
+        </p>
+      </div>
+
+      <div class="extra-card">
+        <h4>Actualizaciones WP</h4>
+        <div class="price-section">
+          <div class="base-price"><span class="amount">+10 €</span></div>
+          <p class="price-note">+20 € con hosting</p>
+        </div>
+        <p class="extra-description">
+          WordPress, plugins y tema al día. Con hosting: copias y aviso de incidencias.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAMBIOS SUELTOS -->
+  <div class="tariffs-section">
+    <h3 class="section-subtitle">Cambios sueltos y por horas</h3>
+
+    <div class="extras-grid">
+      <div class="extra-card">
+        <h4>Hora de trabajo</h4>
+        <div class="price-section">
+          <div class="base-price"><span class="amount">15 €/h</span></div>
+        </div>
+        <p class="extra-description">Para trabajos sin plan fijo o cambios adicionales.</p>
+      </div>
+
+      <div class="extra-card">
+        <h4>Cambio pequeño</h4>
+        <div class="price-section">
+          <div class="base-price"><span class="amount">desde 10 €</span></div>
+        </div>
+        <p class="extra-description">Un ajuste puntual de texto, imagen o enlace.</p>
+      </div>
+
+      <div class="extra-card">
+        <h4>Cambio urgente</h4>
+        <div class="price-section">
+          <div class="base-price"><span class="amount">desde 30 €</span></div>
+        </div>
+        <p class="extra-description">Respuesta rápida cuando lo necesitas para ya.</p>
+      </div>
+
+      <div class="extra-card">
+        <h4>Página extra</h4>
+        <div class="price-section">
+          <div class="base-price"><span class="amount">120-170 €</span></div>
+          <p class="price-note">Por cada página adicional</p>
+        </div>
+        <p class="extra-description">Suma una página nueva a tu proyecto principal.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="tariffs-disclaimer">
+    *Precios orientativos, IVA no incluido. Cada web es única: ajusto cada
     presupuesto a tus necesidades y a los extras que incluyas.
   </p>
-</section>
+</div>
 
 <app-pricing-modal
   *ngIf="showModal"
