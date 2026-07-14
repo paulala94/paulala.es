@@ -6,11 +6,24 @@
     "link": [
       {
         "name": "Visitar",
-        "url": "https://virginiaritaluengo.vercel.app/"
+        "url": "https://virginiarita.com/"
       }
     ],
     "description": "Web minimalista y elegante para mostrar el porfolio audiovisual de Virginia Rita en todos los dispositivos.",
     "stack": ["Vue.js", "Javascript", "CSS"]
+  },
+    {
+    "title": "EOI Almería",
+    "img": "./vir-img.jpg",
+    "video": "./vir-video.mp4",
+    "link": [
+      {
+        "name": "Visitar",
+        "url": "https://www.eoialmeria.es/"
+      }
+    ],
+    "description": "Web minimalista y elegante para mostrar el porfolio audiovisual de Virginia Rita en todos los dispositivos.",
+    "stack": ["Wordpress", "Elementor"]
   },
   {
     "title": "Proyecto Encifras — Pickgeo",

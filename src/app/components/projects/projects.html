@@ -1,66 +1,48 @@
 <div class="projects-container" id="projects">
-  <h2 class="section-title">Proyectos</h2>
+  <div class="projects-header">
+    <h2 class="section-title">Proyectos</h2>
+    <div class="title-accent"></div>
+  </div>
 
-  @for (project of projects; track $index) {
-  <div class="project desktop" [class.even]="$index % 2 === 0">
-    <div class="media">
-      @if (project.video) {
-      <video [src]="project.video" autoplay muted loop></video>
-      }
-    </div>
-
-    <div class="info">
-      <h3>{{ project.title }}</h3>
-      <p>{{ project.description }}</p>
-
-      @if (project.stack.length > 0) {
-      <ul class="stack-list">
-        @for (tech of project.stack; track $index) {
-        <li>{{ tech }}</li>
+  <div class="projects-grid">
+    @for (project of projects; track $index) {
+    <div class="project-card" [attr.data-index]="$index">
+      <div class="card-media">
+        @if (project.video) {
+        <video [src]="project.video" autoplay muted loop></video>
         }
-      </ul>
-      } @if (project.link.length > 0) {
-      <div class="project-buttons">
-        @for (linkItem of project.link; track $index) {
-        <app-button
-          [label]="linkItem.name"
-          variant="margin"
-          (onClick)="navigateToProject(linkItem.url)"
-        ></app-button>
+        <div class="card-overlay"></div>
+      </div>
+
+      <div class="card-content">
+        <div class="content-header">
+          <h3>{{ project.title }}</h3>
+          <span class="project-index">{{ String.fromCharCode(65 + $index) }}</span>
+        </div>
+
+        <p class="project-description">{{ project.description }}</p>
+
+        @if (project.stack.length > 0) {
+        <ul class="tech-stack">
+          @for (tech of project.stack; track $index) {
+          <li class="tech-tag">{{ tech }}</li>
+          }
+        </ul>
+        }
+
+        @if (project.link.length > 0) {
+        <div class="card-actions">
+          @for (linkItem of project.link; track $index) {
+          <app-button
+            [label]="linkItem.name"
+            variant="primary"
+            (onClick)="navigateToProject(linkItem.url)"
+          ></app-button>
+          }
+        </div>
         }
       </div>
-      }
-    </div>
-  </div>
-  } @for (project of projects; track $index) { } @for (project of projects;
-  track $index) {
-  <div class="project mobile" [ngClass]="{'even': $index % 2 === 0}">
-    <div class="media">
-      @if (project.video) {
-      <video [src]="project.video" autoplay muted loop></video>
-      }
-    </div>
-
-    <h3>{{ project.title }}</h3>
-    <p>{{ project.description }}</p>
-    @if (project.stack.length > 0) {
-    <ul class="stack-list">
-      @for (tech of project.stack; track $index) {
-      <li>{{ tech }}</li>
-      }
-    </ul>
-    } @if (project.link.length > 0) {
-    <div class="project-buttons">
-      @for (linkItem of project.link; track $index) {
-      <app-button
-        class="custom-btn"
-        [label]="linkItem.name"
-        variant="primary"
-        (onClick)="navigateToProject(linkItem.url)"
-      ></app-button>
-      }
     </div>
     }
   </div>
-  }
 </div>
